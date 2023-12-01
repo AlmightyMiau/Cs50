@@ -3,9 +3,8 @@
 
 int main(void)
 {
-    int x = 3;
     int i = 0;
-    while (i < x)
+    while (i < 3)
     {
         printf("meow\n");
         i++;
