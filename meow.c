@@ -3,10 +3,9 @@
 
 int main(void)
 {
-    int i = 0;
-    while (i < 3)
+    int x = 36;
+    for (int i = 0; i < x; i++)
     {
         printf("meow\n");
-        i++;
     }
 }
