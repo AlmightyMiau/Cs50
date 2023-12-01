@@ -4,6 +4,7 @@
 int main(void)
 {
     string first = get_string("What's your first name? ");
+    char middle = get_char("What's your middle INITIAL? ");
     string last = get_string("What's your last name? ");
-    printf("Hello, %s %s\n", first, last);
+    printf("Hello, %s %c %s\n", first, middle, last);
 }
