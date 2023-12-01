@@ -4,8 +4,10 @@
 int main(void)
 {
     int x = 3;
-    for (int i; i < x; i++)
+    int i = 0;
+    while (i > x)
     {
         printf("meow\n");
+        i += 1;
     }
 }
