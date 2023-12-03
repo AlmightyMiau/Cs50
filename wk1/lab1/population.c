@@ -21,5 +21,5 @@ int main(void)
         n += (n / 12);
         year++;
     }
-    printf("Years: %i\n", year);
+    printf("%f Years: %i\n", n, year);
 }
