@@ -19,7 +19,7 @@ int get_size(void)
     {
         n = get_int("Size: ");
     }
-    while (n < 1);
+    while (n < 1 || n > 8);
     return n;
 }
 
@@ -29,8 +29,12 @@ void print_grid(size)
     {
         for (int j = 0; j < size; j++)
         {
-            if 
-            printf("#");
+            if ((size - j) == 1)
+            {
+                printf(" ");
+            } else {
+                printf("#");
+            }
         }
         printf("\n");
     }
