@@ -6,12 +6,10 @@ int main(void)
     int n = get_int("Start size: ");
     int end = get_int("End size: ");
     int year = 0;
-    int llamas = n;
-    while (llamas < end)
+    while (n < end)
     {
-        llamas += (n/3)-(n/4);
-        n = llamas;
+        n += (n/12);
         year++;
     }
-    printf("End size: %i\nYears: %i\n", n, year);
+    printf("Years: %i\n", year);
 }
