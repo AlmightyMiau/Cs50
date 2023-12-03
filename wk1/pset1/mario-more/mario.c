@@ -29,8 +29,9 @@ void print_grid(size)
     {
         for (int j = 0; j < size; j++)
         {
+            if 
             printf("#");
-        } 
+        }
         printf("\n");
     }
 }
