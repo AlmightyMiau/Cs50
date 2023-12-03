@@ -9,8 +9,7 @@ int main(void)
     int llamas = n;
     while (llamas < end)
     {
-        llamas += (n/3);
-        llamas -= (n/4);
+        llamas += (n/3)-(n/4);
         n = llamas;
         year++;
     }
