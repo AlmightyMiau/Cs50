@@ -10,9 +10,10 @@ int main(void)
     while (llamas <= end)
     {
         llamas += (n/3);
+        printf("%i", llamas);
         llamas -= (n/4);
         n = llamas;
         year++;
     }
-    printf("Years: %i\n", year);
+    printf("End size: %i\nYears: %i\n", n, year);
 }
