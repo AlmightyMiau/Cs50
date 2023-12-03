@@ -3,8 +3,18 @@
 
 int main(void)
 {
-    int n = get_int("Start size: ");
-    int end = get_int("End size: ");
+    int n;
+    do
+    {
+    n = get_int("Start size: ");
+    }
+    while (n < 9);
+    int end;
+    do
+    {
+    end = get_int("End size: ");
+    }
+    while (end <= n);
     int year = 0;
     while (n < end)
     {
