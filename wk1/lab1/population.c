@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    float n;
+    int n;
     do
     {
         n = get_int("Start size: ");
@@ -18,8 +18,8 @@ int main(void)
     int year = 0;
     while (n < end)
     {
-        n += (n / 12);
+        n += (float) (n / 12);
         year++;
     }
-    printf("%f Years: %i\n", n, year);
+    printf("%d Years: %i\n", n, year);
 }
