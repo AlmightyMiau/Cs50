@@ -1,14 +1,14 @@
-#include <stdio.h>
 #include <cs50.h>
+#include <stdio.h>
 
 int get_size(void);
 void print_grid(int size);
 
 int main(void)
 {
-    //Get Size of Grid
+    // Get Size of Grid
     int size = get_size();
-    //Print Grid
+    // Print Grid
     print_grid(size);
 }
 
@@ -44,7 +44,7 @@ void print_grid(size)
                 }
                 else
                 {
-                    if ((size - (j + i)) )
+                    if ((size - (j + i)))
                     {
                         printf(" ");
                     }
@@ -59,6 +59,3 @@ void print_grid(size)
         printf("\n");
     }
 }
-
-
-
