@@ -18,7 +18,7 @@ int main(void)
     int year = 0;
     while (n < end)
     {
-        n += (float) (n / 12);
+        int c = (float) n + (n / 12);
         year++;
     }
     printf("%d Years: %i\n", n, year);
