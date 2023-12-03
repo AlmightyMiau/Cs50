@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int n;
+    float n;
     do
     {
     n = get_int("Start size: ");
