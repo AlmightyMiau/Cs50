@@ -3,6 +3,15 @@
 
 int main(void)
 {
-    int start = get_int("Starting number of llamas: ");
-    int end = get_int("Ending number of ");
+    int n = get_int("Start size: ");
+    int end = get_int("End size: ");
+    int year = 0;
+    while (n < end)
+    {
+        n += n/3;
+        n -= n/4;
+        year++;
+        printf("%i", year);
+    }
+    printf("Years: %i", year);
 }
