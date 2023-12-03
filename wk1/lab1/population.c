@@ -7,10 +7,9 @@ int main(void)
     int end = get_int("End size: ");
     int year = 0;
     int llamas = n;
-    while (llamas <= end)
+    while (llamas < end)
     {
         llamas += (n/3);
-        printf("%i", llamas);
         llamas -= (n/4);
         n = llamas;
         year++;
