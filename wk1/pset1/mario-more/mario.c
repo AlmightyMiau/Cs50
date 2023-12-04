@@ -33,7 +33,7 @@ void print_grid(size)
             {
                 if ((size - (j + i)) > 1)
                 {
-                    printf(" ");
+                    printf("!");
                 }
                 else
                 {
@@ -46,7 +46,7 @@ void print_grid(size)
                 }
                 else
                 {
-                    printf(" ");
+                    printf("!");
                 }
             }
             printf("  ");
