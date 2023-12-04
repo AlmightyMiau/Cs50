@@ -27,28 +27,27 @@ void print_grid(size)
 {
     for (int i = 0; i < size; i++)
     {
-            for (int j = 0; j < size; j++)
+        for (int j = 0; j < size; j++)
+        {
+            if ((size - (j + i)) > 1)
             {
-                if ((size - (j + i)) > 1)
-                {
-                    printf(" ");
-                }
-                else
-                {
-                    printf("#");
-                }
+                printf(" ");
             }
-            printf("  ");
-            for (int j = size; j > 0; j--)
+            else
             {
-                if ((size - (j + i)) > 0)
-                {
-                    printf(" ");
-                }
-                else
-                {
-                    printf("#");
-                }
+                printf("#");
+            }
+        }
+        printf("  ");
+        for (int j = size; j > 0; j--)
+        {
+            if ((size - (j + i)) > 0)
+            {
+                printf(" ");
+            }
+            else
+            {
+                printf("#");
             }
         }
         printf("\n");
