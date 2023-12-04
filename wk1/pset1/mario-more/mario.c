@@ -27,8 +27,6 @@ void print_grid(size)
 {
     for (int i = 0; i < size; i++)
     {
-        for (int x = 0; x < 1; x++)
-        {
             for (int j = 0; j < size; j++)
             {
                 if ((size - (j + i)) > 1)
