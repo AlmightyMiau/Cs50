@@ -31,27 +31,22 @@ void print_grid(size)
         {
             for (int j = 0; j < size; j++)
             {
-                if (x == 0)
+                if ((size - (j + i)) > 1)
                 {
-                    if ((size - (j + i)) > 1)
-                    {
-                        printf(" ");
-                    }
-                    else
-                    {
-                        printf("#");
-                    }
+                    printf(" ");
                 }
                 else
                 {
-                    if ((size - (j + i)) > 1) )
-                    {
-                        printf("#");
-                    }
-                    else
-                    {
-                        printf(" ");
-                    }
+                    printf("#");
+                }
+            } for (int j = size; j > 0; j--) {
+                if ((size - (j + i)) > 1)
+                {
+                    printf("#");
+                }
+                else
+                {
+                    printf(" ");
                 }
             }
             printf("  ");
