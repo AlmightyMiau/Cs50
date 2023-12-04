@@ -27,7 +27,7 @@ void print_grid(size)
 {
     for (int i = 0; i < size; i++)
     {
-        for (int x = 0; x < 2; x++)
+        for (int x = 0; x < 1; x++)
         {
             for (int j = 0; j < size; j++)
             {
@@ -39,8 +39,11 @@ void print_grid(size)
                 {
                     printf("#");
                 }
-            } for (int j = size; j > 0; j--) {
-                if ((size - (j + i)) > 1)
+            }
+            printf("  ");
+            for (int j = size; j > 0; j--)
+            {
+                if ((size - (j + i + i)) > 1)
                 {
                     printf("#");
                 }
@@ -49,7 +52,6 @@ void print_grid(size)
                     printf("!");
                 }
             }
-            printf("  ");
         }
         printf("\n");
     }
