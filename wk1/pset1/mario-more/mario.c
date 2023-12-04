@@ -43,7 +43,7 @@ void print_grid(size)
             printf("  ");
             for (int j = size; j > 0; j--)
             {
-                if ((size - (j + i + i)) > 1)
+                if ((size - (j + i)) > 1)
                 {
                     printf("#");
                 }
