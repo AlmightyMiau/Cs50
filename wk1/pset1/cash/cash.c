@@ -37,9 +37,10 @@ int main(void)
 
 int get_cents(void)
 {
+    int i;
     do
     {
-        int i = get_int("How many cents? ");
+        i = get_int("How many cents? ");
     }
     while(i <= 0);
     return i;
@@ -53,18 +54,17 @@ int calculate_quarters(int cents)
 
 int calculate_dimes(int cents)
 {
-    // TODO
-    return 0;
+    cents = cents / 10;
+    return cents;
 }
 
 int calculate_nickels(int cents)
 {
-    // TODO
-    return 0;
+    cents = cents / 5;
+    return cents;
 }
 
 int calculate_pennies(int cents)
 {
-    // TODO
-    return 0;
+    return cents;
 }
