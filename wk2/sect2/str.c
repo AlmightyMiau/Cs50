@@ -5,5 +5,11 @@
 
 int main(void)
 {
-
+    string name = "Emma";
+    int l = strlen(name);
+    for (int i = 0; i < l; i++)
+    {
+        printf("%i ", name[i]);
+    }
+    printf("\n");
 }
