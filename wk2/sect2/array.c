@@ -15,8 +15,8 @@ int main(void)
     {
         array[i] = array[i - 1] * 2;
     }
-    for (int i = 0; j < n; j++)
+    for (int i = 0; i < n; i++)
     {
-        printf("%i\n", array[j]);
+        printf("%i\n", array[i]);
     }
 }
