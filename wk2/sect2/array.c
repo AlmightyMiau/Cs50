@@ -3,5 +3,13 @@
 
 int main(void)
 {
-
+    int n;
+    do
+    {
+        n = get_int("Length: ");
+    }
+    while (n < 1);
+    int array[n];
+    array[0] = 1;
+    for 
 }
