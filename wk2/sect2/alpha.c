@@ -7,20 +7,13 @@ int main(void)
 {
     string word = get_string("Word: ");
     int l = strlen(word);
-    int k = 1;
     for (int i = 1; i < l; i++)
     {
-        if (word[i] < word[i - 1])
+        // If NOT alphabetical
+        if (word[i] > word[i - 1])
         {
-            k++;
+            printf("No\n");
+            return 0;
         }
-    }
-    if (k == l)
-    {
-        printf("Yes\n");
-    }
-    if (k != l)
-    {
-        printf("No\n");
     }
 }
