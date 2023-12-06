@@ -11,8 +11,11 @@ int main(void)
     while (n < 1);
     int array[n];
     array[0] = 1;
-    for (int i = 1; i < n; i++)
+    int i = 0;
+    do
     {
         
+        i++
     }
+    while (i < n);
 }
