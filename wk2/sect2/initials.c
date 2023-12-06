@@ -5,8 +5,9 @@
 
 int main(int argc, string argv[])
 {
-    for (int i = 0; i < argc; i++)
+    for (int i = 1; i < argc; i++)
     {
-        printf("argv[%i] is %s\n", i, argv[i]);
+        printf("%c", argv[i][0]);
     }
+    printf("\n");
 }
