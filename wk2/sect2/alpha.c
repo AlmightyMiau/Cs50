@@ -7,16 +7,20 @@ int main(void)
 {
     string word = get_string("Word: ");
     int l = strlen(word);
-    int k = 0;
-    for (int i = 0; i < l; i++)
+    int k = 1;
+    for (int i = 1; i < l; i++)
     {
-        if (((word[i] > 96 && word[i] < 123) && (word[i - 1] > 96 && word[i - 1] < 123) && (word[i] > word[i - 1])))
+        if (word[i] < word[i - 1])
         {
-
+            k++;
         }
     }
-    if ()
+    if (k == l)
     {
-        printf("%s\n", word);
+        printf("Yes\n");
+    }
+    if (k != l)
+    {
+        printf("No\n");
     }
 }
