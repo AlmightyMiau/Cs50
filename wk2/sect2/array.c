@@ -11,13 +11,15 @@ int main(void)
     while (n < 1);
     int array[n];
     array[0] = 1;
-    printf("1\n");
     int i = 1;
     do
     {
         array[i] = array[i-1] * 2;
-        printf("%i\n", array[i]);
         i++;
     }
     while (i < n);
+    for (int j = 0; j < n; j++)
+    {
+        printf("%i\n", array[j]);
+    }
 }
