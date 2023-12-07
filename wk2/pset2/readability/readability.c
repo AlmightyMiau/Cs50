@@ -34,7 +34,7 @@ int main(void)
     float S = (double)(s / w) * 100;
     float index = 0.0588 * L - 0.296 * S - 15.8;
     printf("L: %f, S: %f, Grade: %f\n", L, S, index);
-    if (index % 1 >+ 0.5) {
+    if (index % 1 >= 0.5) {
         index = (int)index + 0.5;
     }
     else
