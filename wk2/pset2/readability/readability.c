@@ -41,14 +41,15 @@ int main(void)
     }
     else
     {
-    int ans = round(index);
-    if (ans >= 16) {
-        printf("Grade 16+\n");
-    }
-    else
-    {
-        printf("Grade %i\n", ans);
-    }
+        int ans = round(index);
+        if (ans >= 16)
+        {
+            printf("Grade 16+\n");
+        }
+        else
+        {
+            printf("Grade %i\n", ans);
+        }
     }
 }
 /*
