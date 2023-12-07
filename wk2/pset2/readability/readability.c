@@ -1,6 +1,6 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
 int main(void)
 {
@@ -15,7 +15,7 @@ int main(void)
         c = text[i];
         int j = c;
         i++;
-        //printf("%i ", j);
+        // printf("%i ", j);
         if (c == '.' || c == '!' || c == '?')
         {
             s++;
@@ -30,14 +30,26 @@ int main(void)
         }
     }
     while (c != '\0');
-    //printf("s: %f w: %f l: %f\n", s, w, l);
-    float L = (float)(l / w) * 100;
-    float S = (double)(s / w) * 100;
+    // printf("s: %f w: %f l: %f\n", s, w, l);
+    float L = (float) (l / w) * 100;
+    float S = (double) (s / w) * 100;
     float index = 0.0588 * L - 0.296 * S - 15.8;
-    //printf("L: %f, S: %f, Grade: %f\n", L, S, index);
-    if (index)
+    // printf("L: %f, S: %f, Grade: %f\n", L, S, index);
+    if (index < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else
+    {
     int ans = round(index);
-    printf("Grade: %i\n", ans);
+    if (ans >= 16) {
+        printf("Grade 16+\n");
+    }
+    else
+    {
+        printf("Grade %i\n", ans);
+    }
+    }
 }
 /*
 
