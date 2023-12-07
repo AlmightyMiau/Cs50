@@ -28,13 +28,14 @@ int main(void)
         {
             l++;
         }
-    }Congratulations! Today is your day. You're off to Great Places! You're off and away!
+    }
     while (c != '\0');
     //printf("s: %f w: %f l: %f\n", s, w, l);
     float L = (float)(l / w) * 100;
     float S = (double)(s / w) * 100;
     float index = 0.0588 * L - 0.296 * S - 15.8;
     //printf("L: %f, S: %f, Grade: %f\n", L, S, index);
+    if (index)
     int ans = round(index);
     printf("Grade: %i\n", ans);
 }
