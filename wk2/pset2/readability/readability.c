@@ -4,9 +4,9 @@
 int main(void)
 {
     string text = get_string("Text: ");
-    int s = 0;
-    int w = 1;
-    int l = 0;
+    float s = 0;
+    float w = 1;
+    float l = 0;
     int i = 0;
     char c;
     do
@@ -29,11 +29,19 @@ int main(void)
         }
     }
     while (c != '\0');
-    printf("s: %i w: %i l: %i\n", s, w, l);
+    printf("s: %f w: %f l: %f\n", s, w, l);
     float L = (float)(l / w) * 100;
     float S = (double)(s / w) * 100;
     float index = 0.0588 * L - 0.296 * S - 15.8;
     printf("L: %f, S: %f, Grade: %f\n", L, S, index);
+    if (index % 1 >+ 0.5) {
+        index = (int)index + 0.5;
+    }
+    else
+    {
+        index = (int)index;
+    }
+    printf("Grade: %f\n", index);
 }
 /*
 
