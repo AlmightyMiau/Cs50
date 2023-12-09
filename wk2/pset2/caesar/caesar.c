@@ -1,12 +1,25 @@
 #include <cs50.h>
 #include <stdio.h>
 
+bool only_digits(string phrase);
+
+
 int main(int argc, string argv[])
 {
     int key = argv[1];
     //if (argc != 2)
     printf("%i\n", key);
 }
+
+bool only_digits(string phrase) {
+    int n = 0;
+    for (int i = 0; n != '\0'; i++) {
+        
+    }
+}
+
+
+
 
 /*
 Your program must accept a single command-line argument, a non-negative integer. Let’s call it *k*
