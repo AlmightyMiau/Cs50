@@ -25,8 +25,8 @@ bool only_digits(string phrase) {
     return true;
 }
 
-int rotate(void) {
-    
+int rotate(c, i) {
+    int v = 
 }
 
 
