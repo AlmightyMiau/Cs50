@@ -18,6 +18,7 @@ int main(int argc, string argv[])
         int key = atoi(argv[1]);
         string plain = get_string("plaintext: ");
         int plainlen = strlen(plain);
+        char
         for (int i = 0; i < plainlen; i++) {
 
         }
