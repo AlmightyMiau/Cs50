@@ -6,7 +6,7 @@
 
 
 bool only_digits(string phrase);
-int rotate(c, i);
+int rotate(char, int);
 
 
 int main(int argc, string argv[])
@@ -18,9 +18,10 @@ int main(int argc, string argv[])
         int key = atoi(argv[1]);
         string plain = get_string("plaintext: ");
         int plainlen = strlen(plain);
-        char 
+        int cypher[plainlen];
         for (int i = 0; i < plainlen; i++) {
-
+            cypher[i] = rotate(plain[i], key);
+            printf("%c", cypher[i]);
         }
     }
 }
