@@ -16,6 +16,8 @@ bool only_digits(string phrase) {
     for (int i = 0; n != '\0'; i++) {
         if (47 < phrase[i] && phrase[i] < 58) {
             return true;
+        } else {
+            return false;
         }
     }
 }
