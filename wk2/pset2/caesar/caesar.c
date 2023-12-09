@@ -6,7 +6,12 @@ bool only_digits(string phrase);
 
 int main(int argc, string argv[])
 {
-    only_digits(argv[1]);
+    if (only_digits(argv[1]) == false) {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    } else {
+        return 0;
+    }
 }
 
 bool only_digits(string phrase) {
