@@ -6,7 +6,7 @@
 
 
 bool only_digits(string phrase);
-int rotate(char, int);
+int rotate(char c, int i);
 
 
 int main(int argc, string argv[])
@@ -37,7 +37,7 @@ bool only_digits(string phrase) {
 }
 
 
-int rotate(c, i) {
+int rotate(char c, int i) {
     if ((64 < c && c < 91) || (96 < c && c < 123)) {
         c += i;
         if (64 > c || (c > 91 && 96 > c) || c > 123) {
