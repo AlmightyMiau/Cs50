@@ -4,7 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 bool only_digits(string phrase);
+int rotate(c, i);
 
 
 int main(int argc, string argv[])
@@ -22,6 +24,7 @@ int main(int argc, string argv[])
     }
 }
 
+
 bool only_digits(string phrase) {
     for (int i = 0; phrase[i] != '\0'; i++) {
         if (47 > phrase[i] || phrase[i] > 58) {
@@ -30,6 +33,7 @@ bool only_digits(string phrase) {
     }
     return true;
 }
+
 
 int rotate(c, i) {
     if ((64 < c && c < 91) || (96 < c && c < 123)) {
