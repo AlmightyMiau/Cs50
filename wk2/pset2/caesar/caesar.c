@@ -13,8 +13,9 @@ int main(int argc, string argv[])
     } else {
         int key = atoi(argv[1]);
         string plain = get_string("plaintext: ");
+        
         for (int i = 0; plain[i] != '\0'; i++) {
-            
+
         }
     }
 }
