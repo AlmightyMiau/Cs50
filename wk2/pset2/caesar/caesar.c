@@ -11,7 +11,8 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     } else {
-        int key = atoi()
+        int key = atoi(argv[1]);
+        string phrase = get_string("plaintext: ");
     }
 }
 
@@ -24,6 +25,9 @@ bool only_digits(string phrase) {
     return true;
 }
 
+int rotate(void) {
+    
+}
 
 
 
