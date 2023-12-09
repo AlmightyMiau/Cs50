@@ -6,19 +6,16 @@ bool only_digits(string phrase);
 
 int main(int argc, string argv[])
 {
-    //int key = argv[1];
-    //if (argc != 2)
-    //printf("%i\n", key);
+    only_digits(argv[1]);
 }
 
 bool only_digits(string phrase) {
     for (int i = 0; phrase[i] != '\0'; i++) {
-        if (47 < phrase[i] && phrase[i] < 58) {
-            return true;
-        } else {
+        if (47 > phrase[i] || phrase[i] > 58) {
             return false;
         }
     }
+    return true;
 }
 
 
