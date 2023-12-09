@@ -14,7 +14,9 @@ int main(int argc, string argv[])
 bool only_digits(string phrase) {
     int n = 0;
     for (int i = 0; n != '\0'; i++) {
-        
+        if (47 < phrase[i] && phrase[i] < 58) {
+            return true;
+        }
     }
 }
 
