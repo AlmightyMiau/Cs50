@@ -23,6 +23,7 @@ int main(int argc, string argv[])
             cypher[i] = rotate(plain[i], key);
             printf("%c", cypher[i]);
         }
+        printf("\n");
     }
 }
 
