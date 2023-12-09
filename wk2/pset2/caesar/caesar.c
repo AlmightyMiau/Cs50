@@ -3,5 +3,5 @@
 
 int main(int argc, string argv[])
 {
-    if (argc != 2 || )
+    if (argc != 2 || (argv[1] % 1 != 0))
 }
