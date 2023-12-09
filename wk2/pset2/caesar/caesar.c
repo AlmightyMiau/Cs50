@@ -26,7 +26,14 @@ bool only_digits(string phrase) {
 }
 
 int rotate(c, i) {
-    int v = 
+    if ((64 < c && c < 91) || (96 < c && c < 123)) {
+        c += i;
+        if (64 > c || (c > 91 && 96 > c) || c > 123) {
+            c -= 26;
+        }
+    } else {
+        return c;
+    }
 }
 
 
