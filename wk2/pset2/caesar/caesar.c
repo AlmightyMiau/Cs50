@@ -34,9 +34,8 @@ int rotate(c, i) {
         if (64 > c || (c > 91 && 96 > c) || c > 123) {
             c -= 26;
         }
-    } else {
-        return c;
     }
+    return c;
 }
 
 
