@@ -11,7 +11,7 @@ int rotate(char c, int i);
 
 int main(int argc, string argv[])
 {
-    if (only_digits(argv[1]) == false || argc != 2) {
+    if (argc != 2 || only_digits(argv[1]) == false) {
         printf("Usage: ./caesar key\n");
         return 1;
     } else {
