@@ -1,0 +1,12 @@
+
+Order
+    O(n^2): Selection, Bubble
+    O(n):
+    O(logn):
+    O(c):
+
+Omega
+    Q(n^2): Selection
+    Q(n): Bubble
+    Q(logn):
+    Q(c):
