@@ -16,8 +16,8 @@ O(n):
 O(logn):
 O(c):
 
-Q(n^2): Selection, Bubble
-Q(n):
+Q(n^2): Selection
+Q(n): Bubble
 Q(logn):
 Q(c):
 
