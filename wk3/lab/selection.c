@@ -30,4 +30,5 @@ int main(void) {
     repeat
 
     O(n^2)
+    0(n^2)
 */
