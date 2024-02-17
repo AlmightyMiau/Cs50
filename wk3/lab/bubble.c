@@ -15,5 +15,5 @@ int main(void) {
     repeat until completely sorted
 
     worst sorting method
-    O(n)
+    O(n^2)
 */

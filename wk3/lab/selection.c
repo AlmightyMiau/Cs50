@@ -5,11 +5,12 @@
 #include <string.h>
 
 int main(void) {
-    int arr[] = 
-    for (int i = 0; i < arr.length - 1; i++) {
+    int arr[] =
+    int n = arr.length
+    for (int i = 0; i < n - 1; i++) {
         int n;
         int m;
-        for (int j = i; j < arr.length - 1; j++) {
+        for (int j = i; j < n - 1; j++) {
             if (arr[j] < n || n === undefined) {
                 n = arr[j];
                 m = j;
@@ -28,5 +29,5 @@ int main(void) {
     swap the 1st value and the smallest value
     repeat
 
-
+    O(n)
 */
