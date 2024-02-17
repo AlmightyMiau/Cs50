@@ -29,5 +29,5 @@ int main(void) {
     swap the 1st value and the smallest value
     repeat
 
-    O(n)
+    O(n^2)
 */
