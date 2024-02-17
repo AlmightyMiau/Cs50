@@ -30,5 +30,6 @@ int main(void) {
     repeat
 
     O(n^2)
+    Q(n^2)  Omega
     0(n^2)
 */

@@ -16,4 +16,5 @@ int main(void) {
 
     worst sorting method
     O(n^2)
+    Q(n)
 */
