@@ -17,5 +17,5 @@ int main(void) {
 
 
 /*
-
+    struct makes a new 
 */
