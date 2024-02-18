@@ -1,12 +1,14 @@
 
 Order
     O(n^2): Selection, Bubble
+    O(n log n): Merge
     O(n):
     O(logn):
     O(c):
 
 Omega
     Q(n^2): Selection
+    O(n log n): Merge
     Q(n): Bubble
     Q(logn):
     Q(c):
