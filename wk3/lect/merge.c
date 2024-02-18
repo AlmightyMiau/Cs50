@@ -14,8 +14,5 @@ int main(void) {
     Else
         Sort left half
         Sort right half
-        Merge sorted halves by
-            comparing the first value of each
-            placing it in the correct order
-            moving along to the next number
+        Merge sorted halves
 */
