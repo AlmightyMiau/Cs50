@@ -25,6 +25,6 @@ SEARCH
     Omega (Lower Bound)
         Q(n^2):
         O(n log n):
-        Q(n): Linear
+        Q(n):
         Q(log n):
-        Q(c):
+        Q(1): Linear, Binary
