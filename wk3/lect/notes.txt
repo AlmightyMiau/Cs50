@@ -1,14 +1,30 @@
 
-Order
-    O(n^2): Selection, Bubble
-    O(n log n): Merge
-    O(n):
-    O(logn):
-    O(c):
+SORT
+    Order
+        O(n^2): Selection, Bubble
+        O(n log n): Merge
+        O(n):
+        O(log n):
+        O(c):
 
-Omega
-    Q(n^2): Selection
-    O(n log n): Merge
-    Q(n): Bubble
-    Q(logn):
-    Q(c):
+    Omega
+        Q(n^2): Selection
+        O(n log n): Merge
+        Q(n): Bubble
+        Q(log n):
+        Q(c):
+
+SEARCH
+    Order
+        O(n^2):
+        O(n log n):
+        O(n): Linear
+        O(log n): Binary
+        O(c):
+
+    Omega
+        Q(n^2):
+        O(n log n):
+        Q(n): Linear
+        Q(log n): 
+        Q(c):
