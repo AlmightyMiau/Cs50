@@ -18,5 +18,4 @@ int main(void) {
             comparing the first value of each
             placing it in the correct order
             moving along to the next number
-        repeat until one number left
 */
