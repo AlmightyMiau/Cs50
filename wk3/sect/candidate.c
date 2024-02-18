@@ -9,14 +9,20 @@ typedef struct {
     int votes;
 } candidate;
 
+candidate get_candidate(string prompt);
+
 int main(void) {
     candidate president = get_candidate("Enter a candidate: ");
-    president.name = "Alyssa";
-    president.votes = 10;
+    printf("%s\n", president.name);
+    printf("%i\n", president.votes);
 }
 
 candidate get_candidate(string prompt) {
-
+    printf("%s\n", prompt);
+    candidate c;
+    c.name = get_string("Enter a name: ");
+    c.votes = get_int("Enter a numbe of votes: ");
+    return c;
 }
 
 /*
