@@ -10,12 +10,15 @@ typedef struct {
 } candidate;
 
 int main(void) {
-    candidate president;
+    candidate president = get_candidate("Enter a candidate: ");
     president.name = "Alyssa";
     president.votes = 10;
 }
 
+candidate get_candidate(string prompt) {
+
+}
 
 /*
-    struct makes a new 
+    struct makes a new
 */
