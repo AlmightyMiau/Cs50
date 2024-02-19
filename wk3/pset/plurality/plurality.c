@@ -81,6 +81,10 @@ void print_winner(void)
 {
     int winners[candidate_count];
     winners[0] = 0;
+    for (int j = 1; j < candidate_count; j++)
+    {
+        winners[j] = -1;
+    }
     for (int i = 1; i < candidate_count; i++)
     {
         if (candidates[winners[0]].votes < candidates[i].votes) // if the new candidate has more votes than previous
