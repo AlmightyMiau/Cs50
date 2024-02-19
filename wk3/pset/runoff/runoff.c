@@ -187,16 +187,18 @@ int find_min(void)
     // look through all candidates
     for (int i = 0; i < candidate_count; i++)
     {
-        // if the new candidate has less votes than previous
-        if (candidates[i].votes < candidates[dead[0]].votes)
-        {
-            // clear the list of dead
-            for (int j = 1; j < candidate_count; j++)
+        if (!candidates[i].eliminated) {
+            // if the new candidate has less votes than previous
+            if (candidates[i].votes < candidates[dead[0]].votes)
             {
-                dead[j] = -1;
+                // clear the list of dead
+                for (int j = 1; j < candidate_count; j++)
+                {
+                    dead[j] = -1;
+                }
+                // put it at the start of the new list
+                dead[0] = i;
             }
-            // put it at the start of the new list
-            dead[0] = i;
         }
     }
     return candidates[dead[0]].votes;
