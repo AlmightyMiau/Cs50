@@ -164,29 +164,12 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    int dead[candidate_count];
-    dead[0] = 0;
-    // set the unused spaces of the array of least voted
-    for (int j = 1; j < candidate_count; j++)
-    {
-        dead[j] = -1;
-    }
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes >= (voter_count / 2))
         {
             printf("%s", candidate.name);
             return true;
-        }
-        else if (candidates[dead[0]].votes > candidates[i].votes) // if the new candidate has more less than previous
-        {
-            // clear the list of dead
-            for (int j = 1; j < candidate_count; j++)
-            {
-                dead[j] = -1;
-            }
-            // put it at the start of the new list
-            dead[0] = i;
         }
     }
     return false;
@@ -195,7 +178,16 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    // TODO
+    if (candidates[dead[0]].votes > candidates[i].votes) // if the new candidate has more less than previous
+    {
+        // clear the list of dead
+        for (int j = 1; j < candidate_count; j++)
+        {
+            dead[j] = -1;
+        }
+        // put it at the start of the new list
+        dead[0] = i;
+    }
     return 0;
 }
 
