@@ -104,12 +104,13 @@ void print_winner(void)
             }
         }
     }
-    for (int i = 1; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (winners[i] != 0)
         {
-            printf("Winners are %s", winners[i]);
+
         }
+        printf("Winners are %s", winners[i]);
     }
     return;
 }
