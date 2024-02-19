@@ -29,4 +29,8 @@ sorted 5000
 
 sorted 10000
     0.070
-    
+
+
+
+sort 1 doubles as sorted numbers double
+
