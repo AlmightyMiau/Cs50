@@ -83,22 +83,23 @@ void print_winner(void)
     winners[0] = candidates[0].name;
     for (int i = 1; i < candidate_count - 1; i++)
     {
-        if (winners[0] < candidates[i].name) //if the new candidate has more votes than all previous
+        if (winners[0] < candidates[i].name) // if the new candidate has more votes than all previous
         {
-            //clear the list of winners
+            // clear the list of winners
             for (int j = 1; j < candidate_count - 1; j++)
             {
                 winners[j] = 0;
             }
-            //put it at the start of the new list
+            // put it at the start of the new list
             winners[0] = candidates[i].name;
-        } else if (winners[0] == candidates[i].name)
+        }
+        else if (winners[0] == candidates[i].name)
         {
             for (int j = 1; j < candidate_count - 1; j++)
             {
                 if (winners[j] == 0)
                 {
-                    winners[j] == candidates[i].name;
+                    winners[j] = candidates[i].name;
                 }
             }
         }
