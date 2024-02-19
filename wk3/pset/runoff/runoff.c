@@ -164,14 +164,25 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // go through each candidate
-    // if they have more than 50% of the votes they win
-    //     print winner
-    //     return true;
-    // else
-    //     filter through all candidates
-    //     see who has the least votes and eliminate them
-    //     return false;
+    /*
+    go through each candidate
+    if they have more than 50% of the votes they win
+        print winner
+        return true;
+    else
+        filter through all candidates
+        see who has the least votes and eliminate them
+        return false;
+    */
+
+    /*
+    for (candidates) {
+        if (candidates.votes >= (voter_count / 2)) {
+            printf("%s", candidate.name);
+            return true;
+        } else if ()
+    }
+    */
     return false;
 }
 
