@@ -4,27 +4,19 @@ SORT
         O(n^2): Selection, Bubble
         O(n log n): Merge
         O(n):
-        O(log n):
-        O(c):
 
     Omega (Lower Bound)
         Q(n^2): Selection
         O(n log n): Merge
         Q(n): Bubble
-        Q(log n):
-        Q(c):
 
 SEARCH
     Order (Upper Bound)
-        O(n^2):
-        O(n log n):
         O(n): Linear
         O(log n): Binary
         O(c):
 
     Omega (Lower Bound)
-        Q(n^2):
-        O(n log n):
         Q(n):
         Q(log n):
         Q(1): Linear, Binary
