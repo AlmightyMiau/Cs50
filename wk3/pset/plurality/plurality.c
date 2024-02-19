@@ -50,7 +50,6 @@ int main(int argc, string argv[])
     for (int i = 0; i < voter_count; i++)
     {
         string name = get_string("Vote: ");
-        printf("vote is for %s\n", name);
 
         // Check for invalid vote
         if (!vote(name))
@@ -66,10 +65,9 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    for (int i = 0; i < candidate_count - 1; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        printf("candidate is %s\n", candidates[i].name);
-        if (name == candidates[i].name)
+        if (!strcmp(name, candidates[i].name))
         {
             candidates[i].votes++;
             return true;
@@ -81,14 +79,14 @@ bool vote(string name)
 // Print the winner (or winners) of the election
 void print_winner(void)
 {
-    string winners[candidate_count - 1];
+    string winners[candidate_count];
     winners[0] = candidates[0].name;
-    for (int i = 1; i < candidate_count - 1; i++)
+    for (int i = 1; i < candidate_count; i++)
     {
         if (winners[0] < candidates[i].name) // if the new candidate has more votes than all previous
         {
             // clear the list of winners
-            for (int j = 1; j < candidate_count - 1; j++)
+            for (int j = 1; j < candidate_count; j++)
             {
                 winners[j] = 0;
             }
@@ -97,7 +95,7 @@ void print_winner(void)
         }
         else if (winners[0] == candidates[i].name)
         {
-            for (int j = 1; j < candidate_count - 1; j++)
+            for (int j = 1; j < candidate_count; j++)
             {
                 if (winners[j] == 0)
                 {
@@ -106,7 +104,7 @@ void print_winner(void)
             }
         }
     }
-    for (int i = 1; i < candidate_count - 1; i++)
+    for (int i = 1; i < candidate_count; i++)
     {
         if (winners[i] != 0)
         {
