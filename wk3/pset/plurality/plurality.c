@@ -80,10 +80,10 @@ bool vote(string name)
 void print_winner(void)
 {
     string winners[candidate_count];
-    winners[0] = candidates[0].name;
+    winners[0] = candidates[0].votes;
     for (int i = 1; i < candidate_count; i++)
     {
-        if (winners[0] < candidates[i].name) // if the new candidate has more votes than all previous
+        if (winners[0] < candidates[i].votes) // if the new candidate has more votes than all previous
         {
             // clear the list of winners
             for (int j = 1; j < candidate_count; j++)
@@ -91,15 +91,15 @@ void print_winner(void)
                 winners[j] = 0;
             }
             // put it at the start of the new list
-            winners[0] = candidates[i].name;
+            winners[0] = candidates[i].votes;
         }
-        else if (winners[0] == candidates[i].name)
+        else if (winners[0] == candidates[i].votes)
         {
             for (int j = 1; j < candidate_count; j++)
             {
                 if (winners[j] == 0)
                 {
-                    winners[j] = candidates[i].name;
+                    winners[j] = candidates[i].votes;
                 }
             }
         }
