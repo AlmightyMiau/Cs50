@@ -80,7 +80,9 @@ void print_winner(void)
 {
     string winners[candidate_count - 1] = candidates[0];
     for (int i = 1; i < candidate_count - 1; i++) {
-        if (winners)
+        if (winners[0] < candidate[i].name) {
+            
+        }
     }
     return;
 }
