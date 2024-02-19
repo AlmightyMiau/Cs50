@@ -50,6 +50,7 @@ int main(int argc, string argv[])
     for (int i = 0; i < voter_count; i++)
     {
         string name = get_string("Vote: ");
+        printf("vote is for %s\n", name);
 
         // Check for invalid vote
         if (!vote(name))
