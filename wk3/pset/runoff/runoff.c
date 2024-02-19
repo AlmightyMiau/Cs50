@@ -164,18 +164,6 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    /*
-    go through each candidate
-    if they have more than 50% of the votes they win
-        print winner
-        return true;
-    else
-        filter through all candidates
-        see who has the least votes and eliminate them
-        return false;
-    */
-
-    /*
     int dead[candidate_count];
     dead[0] = 0;
     // set the unused spaces of the array of least voted
@@ -190,21 +178,17 @@ bool print_winner(void)
             printf("%s", candidate.name);
             return true;
         }
-        else if ()
+        else if (candidates[dead[0]].votes > candidates[i].votes) // if the new candidate has more less than previous
         {
-            if (candidates[winners[0]].votes < candidates[i].votes) // if the new candidate has more votes than previous
+            // clear the list of dead
+            for (int j = 1; j < candidate_count; j++)
             {
-                // clear the list of winners
-                for (int j = 1; j < candidate_count; j++)
-                {
-                    winners[j] = -1;
-                }
-                // put it at the start of the new list
-                winners[0] = i;
+                dead[j] = -1;
             }
+            // put it at the start of the new list
+            dead[0] = i;
         }
     }
-    */
     return false;
 }
 
