@@ -172,21 +172,29 @@ bool print_winner(void)
         }
     }
     return false;
-
 }
 
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-    if (candidates[dead[0]].votes > candidates[i].votes) // if the new candidate has more less than previous
+    int dead[candidate_count];
+    dead[0] = 0;
+    for (int j = 1; j < candidate_count; j++)
     {
-        // clear the list of dead
-        for (int j = 1; j < candidate_count; j++)
+        dead[j] = -1;
+    }
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[dead[0]].votes > candidates[i].votes) // if the new candidate has more less than previous
         {
-            dead[j] = -1;
+            // clear the list of dead
+            for (int j = 1; j < candidate_count; j++)
+            {
+                dead[j] = -1;
+            }
+            // put it at the start of the new list
+            dead[0] = i;
         }
-        // put it at the start of the new list
-        dead[0] = i;
     }
     return 0;
 }
