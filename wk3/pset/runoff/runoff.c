@@ -179,13 +179,16 @@ int find_min(void)
 {
     int dead[candidate_count];
     dead[0] = 0;
+    // set unused places of the dead array
     for (int j = 1; j < candidate_count; j++)
     {
         dead[j] = -1;
     }
+    // look through all candidates
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[dead[0]].votes > candidates[i].votes) // if the new candidate has more less than previous
+        // if the new candidate has less votes than previous
+        if (candidates[i].votes < candidates[dead[0]].votes)
         {
             // clear the list of dead
             for (int j = 1; j < candidate_count; j++)
@@ -196,7 +199,7 @@ int find_min(void)
             dead[0] = i;
         }
     }
-    return 0;
+    return candidates[dead[0]].votes;
 }
 
 // Return true if the election is tied between all candidates, false otherwise
