@@ -143,12 +143,13 @@ void tabulate(void)
 {
     for (int i = 0; i < voter_count; i++)
     {
-        // Query for each rank
+        //
         for (int j = 0; j < candidate_count; j++)
         {
                 if (!candidates[preferences[i][j]].eliminated)
                 {
                     candidates[preferences[i][j]].votes++;
+                    break;
                 }
         }
     }
