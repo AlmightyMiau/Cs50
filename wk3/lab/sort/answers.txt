@@ -2,13 +2,13 @@ sort1 uses: TODO
 
 How do you know?: TODO
 
-sort2 uses: TODO
+sort2 uses: Merge sort
 
-How do you know?: TODO
+How do you know?: time is the same for sorted, random, and reversed, which matches with merge sort being theta(n log n) for time
 
 sort3 uses: Selection sort
 
-How do you know?: TODO
+How do you know?: time 
 
 
 
@@ -40,4 +40,5 @@ Lower Bound
 
 Upper Bound
     reverse 5000
-        
+        0.080
+        0.035
