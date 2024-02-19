@@ -92,8 +92,15 @@ void print_winner(void)
             }
             //put it at the start of the new list
             winners[0] = candidates[i].name;
-        } else if (winners[0] == candidates[i].name) {
-            for (int j = 1;j < candidate_count - 1; j++)
+        } else if (winners[0] == candidates[i].name)
+        {
+            for (int j = 1; j < candidate_count - 1; j++)
+            {
+                if (winners[j] == 0)
+                {
+                    winners[j] == candidates[i].name;
+                }
+            }
         }
     }
     return;
