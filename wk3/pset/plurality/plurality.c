@@ -104,6 +104,7 @@ void print_winner(void)
                 if (winners[j] == -1)
                 {
                     winners[j] = j;
+                    break;
                 }
             }
         }
