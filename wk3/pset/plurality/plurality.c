@@ -103,7 +103,7 @@ void print_winner(void)
             {
                 if (winners[j] == -1)
                 {
-                    winners[j] = candidates[i].votes;
+                    winners[j] = j;
                 }
             }
         }
