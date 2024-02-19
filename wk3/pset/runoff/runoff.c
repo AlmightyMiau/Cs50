@@ -176,7 +176,7 @@ bool print_winner(void)
     */
 
     /*
-    for (candidates)
+    for (int i = 0; i < candidate_count; )
     {
         if (candidates.votes >= (voter_count / 2))
         {
@@ -185,7 +185,7 @@ bool print_winner(void)
         }
         else if ()
         {
-            
+
         }
     }
     */
