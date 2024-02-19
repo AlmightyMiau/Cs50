@@ -164,38 +164,7 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    int losers[candidate_count];
-    losers[0] = 0;
-    // reset it
-    for (int j = 1; j < candidate_count; j++)
-    {
-        losers[j] = -1;
-    }
-    // goes through every candidate, looks at votes, eliminates the least voted
-    for (int i = 1; i < candidate_count; i++)
-    {
-        if (candidates[losers[0]].votes > candidates[i].votes) // if the new candidate has more votes than previous
-        {
-            // clear the list of winners
-            for (int j = 1; j < candidate_count; j++)
-            {
-                losers[j] = -1;
-            }
-            // put it at the start of the new list
-            losers[0] = i;
-        }
-        else if (candidates[losers[0]].votes == candidates[i].votes)
-        {
-            for (int j = 1; j < candidate_count; j++)
-            {
-                if (losers[j] == -1)
-                {
-                    losers[j] = j;
-                    break;
-                }
-            }
-        }
-    }
+    
     return false;
 }
 
