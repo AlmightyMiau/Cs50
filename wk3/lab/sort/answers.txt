@@ -1,6 +1,6 @@
 sort1 uses: Bubble sort
 
-How do you know?: TODO
+How do you know?: time is low for sorted, as it should be for Omega(n), and time is high for reversed, as it should be for O(n^2)
 
 sort2 uses: Merge sort
 
@@ -8,45 +8,4 @@ How do you know?: time is the same for sorted, random, and reversed, which match
 
 sort3 uses: Selection sort
 
-How do you know?: time is the similar for sorted, random, and reversed, which matches with selection sort being theta(n^2) for time
-
-
-random 5000
-    0.079
-    0.035
-    0.090
-
-random 10000
-    0.351
-    0.072
-    0.159
-
-Lower Bound
-    sorted 5000
-        0.040
-        0.035
-        0.060
-
-    sorted 10000
-        0.070
-        0.080
-        0.140
-
-    sorted 50000
-        0.600
-        0.625
-        2.450
-
-Upper Bound
-    reverse 5000
-        0.080
-        0.035
-
-    reverse 10000
-        2.450
-        0.070
-
-    reverse 50000
-        5.000
-        0.600
-        2.600
+How do you know?: time is similar for sorted, random, and reversed, which matches with selection sort being theta(n^2) for time
