@@ -88,7 +88,7 @@ void print_winner(void)
             // clear the list of winners
             for (int j = 1; j < candidate_count; j++)
             {
-                winners[j] = 0;
+                winners[j] = -1;
             }
             // put it at the start of the new list
             winners[0] = i;
@@ -97,7 +97,7 @@ void print_winner(void)
         {
             for (int j = 1; j < candidate_count; j++)
             {
-                if (winners[j] == 0)
+                if (winners[j] == -1)
                 {
                     winners[j] = candidates[i].votes;
                 }
@@ -106,11 +106,10 @@ void print_winner(void)
     }
     for (int i = 0; i < candidate_count; i++)
     {
-        if (winners[i] != 0)
+        if (winners[i] != -1)
         {
-
+            printf("Winners are %s", candidates[winners[i]].name);
         }
-        printf("Winners are %s", candidates[winners[i]].name);
     }
     return;
 }
