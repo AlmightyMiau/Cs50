@@ -7,7 +7,7 @@
 #define MAX_CANDIDATES 9
 
 // preferences[i][j] is jth preference for voter i
-string preferences[MAX_VOTERS][MAX_CANDIDATES];
+int preferences[MAX_VOTERS][MAX_CANDIDATES];
 
 // Candidates have name, vote count, eliminated status
 typedef struct
@@ -131,7 +131,7 @@ bool vote(int voter, int rank, string name)
     {
         if (!strcmp(name, candidates[i].name))
         {
-            preferences[voter][rank] = candidates[i].name;
+            preferences[voter][rank] = i;
             return true;
         }
     }
