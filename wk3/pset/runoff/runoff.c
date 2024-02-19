@@ -176,16 +176,32 @@ bool print_winner(void)
     */
 
     /*
-    for (int i = 0; i < candidate_count; )
+    int dead[candidate_count];
+    dead[0] = 0;
+    // set the unused spaces of the array of least voted
+    for (int j = 1; j < candidate_count; j++)
     {
-        if (candidates.votes >= (voter_count / 2))
+        dead[j] = -1;
+    }
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes >= (voter_count / 2))
         {
             printf("%s", candidate.name);
             return true;
         }
         else if ()
         {
-
+            if (candidates[winners[0]].votes < candidates[i].votes) // if the new candidate has more votes than previous
+            {
+                // clear the list of winners
+                for (int j = 1; j < candidate_count; j++)
+                {
+                    winners[j] = -1;
+                }
+                // put it at the start of the new list
+                winners[0] = i;
+            }
         }
     }
     */
