@@ -164,7 +164,10 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    
+    // go through each candidate
+    // if they have more than 50% of the votes they win
+    //      
+    // print winner
     return false;
 }
 
