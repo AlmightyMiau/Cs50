@@ -80,7 +80,7 @@ void print_winner(void)
 {
     string winner;
     for (int i = 0; i < candidate_count - 1; i++) {
-        
+        if (winner === undefined)
     }
     return;
 }
