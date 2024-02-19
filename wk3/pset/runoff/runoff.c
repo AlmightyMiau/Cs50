@@ -146,16 +146,10 @@ void tabulate(void)
         // Query for each rank
         for (int j = 0; j < candidate_count; j++)
         {
-            for (int k = 0; k < candidate_count; k++)
-            {
-                if (!strcmp(preferences[i][j], candidates[k].name))
+                if (!candidates[preferences[i][j]].eliminated)
                 {
-                    if (!candidates[k].eliminated)
-                    {
-                        candidates[k].votes++;
-                    }
+                    candidates[preferences[i][j]].votes++;
                 }
-            }
         }
     }
     return;
