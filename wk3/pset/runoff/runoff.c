@@ -171,7 +171,7 @@ bool print_winner(void)
     {
         winners[j] = -1;
     }
-    // 
+    // goes through every candidate, looks at votes, eliminates the least voted
     for (int i = 1; i < candidate_count; i++)
     {
         if (candidates[winners[0]].votes < candidates[i].votes) // if the new candidate has more votes than previous
