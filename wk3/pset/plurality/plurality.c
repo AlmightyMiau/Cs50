@@ -108,7 +108,7 @@ void print_winner(void)
     {
         if (winners[i] != 0)
         {
-            printf("%s", winners[i]);
+            printf("Winners are %s", winners[i]);
         }
     }
     return;
