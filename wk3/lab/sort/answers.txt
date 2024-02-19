@@ -29,8 +29,8 @@ sorted 5000
 
 sorted 10000
     0.070
-    0.080
-    
+    0.075
+    0.140
 
 
 sort 1 doubles as sorted numbers double
