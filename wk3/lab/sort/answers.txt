@@ -35,7 +35,7 @@ sorted 10000
 sorted 50000
     0.600
     0.625
-    2.
+    2.450
 
 sort 1 doubles as sorted numbers double
 
