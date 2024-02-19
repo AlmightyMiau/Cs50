@@ -166,8 +166,12 @@ bool print_winner(void)
 {
     // go through each candidate
     // if they have more than 50% of the votes they win
-    //      
-    // print winner
+    //     print winner
+    //     return true;
+    // else
+    //     filter through all candidates
+    //     see who has the least votes and eliminate them
+    //     return false;
     return false;
 }
 
