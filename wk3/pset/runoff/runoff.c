@@ -176,11 +176,17 @@ bool print_winner(void)
     */
 
     /*
-    for (candidates) {
-        if (candidates.votes >= (voter_count / 2)) {
+    for (candidates)
+    {
+        if (candidates.votes >= (voter_count / 2))
+        {
             printf("%s", candidate.name);
             return true;
-        } else if ()
+        }
+        else if ()
+        {
+            
+        }
     }
     */
     return false;
