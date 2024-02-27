@@ -12,7 +12,7 @@ int main(void)
         return 1;
     }
 
-    char *t = malloc(strlen(s) + 1);
+    char *t = malloc(strlen(s) + 1); // allocates a piece of memory for the new string with the same length as s
     if (t == NULL)
     {
         return 1;
