@@ -32,4 +32,7 @@ int main(void)
 
     printf("%p\n", s);
     printf("%p\n", t);
+
+    free(t); // frees the memory allocated by malloc
+    return 0;
 }
