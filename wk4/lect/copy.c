@@ -6,12 +6,20 @@
 
 int main(void)
 {
-    string s = get_string("s: ");
+    char *s = get_string("s: ");
 
-    string t = s;
+    char *t = malloc(strlen(s) + 1);
 
-    t[0] = toupper(t[0]);
+    for (int i = 0, n = strlen(s); i <= n; i++)
+    {
+        t[i] = s[i];
+    }
 
-    printf("%s\n", s);
-    printf("%s\n", t);
+    if(strlen(t) > 0)
+    {
+        t[0] = toupper(t[0]);
+    }
+
+    printf("%p\n", s);
+    printf("%p\n", t);
 }
