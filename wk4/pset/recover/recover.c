@@ -20,4 +20,17 @@ int main(int argc, char *argv[])
     }
 
     fread(infile, sizeof(RGBTRIPLE), width, inptr);
+
+    /*
+    if (first 3 bytes are 0xff 0xd8 0xff AND 4th byte is 0xe* (* denotes anything)) {
+        this is a photo; remember the pointer
+    }
+
+
+
+
+
+    */
+
+
 }
