@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
                     break
                 }
             }
-            Open output file with name ()
+            Open output file with name (file number.jpg)
 
             files++
 
