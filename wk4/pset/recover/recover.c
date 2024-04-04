@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
                 }
             }
             Open output file with name (file number.jpg)
+                    FILE *outptr = fopen(outfile, "w");
 
             files++
 
