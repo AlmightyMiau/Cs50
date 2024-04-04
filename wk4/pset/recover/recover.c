@@ -23,13 +23,21 @@ int main(int argc, char *argv[])
 
     /*
     for (file length) {
-        if (first 3 bytes are 0xff 0xd8 0xff AND 4th byte is 0xe* (* denotes anything)) {
+        if (first 3 bytes are 0xff 0xd8 0xff AND 4th byte is 0xe* (* denotes anything))
+        {
             this is a photo; remember the pointer
-            look through the blocks ahead of this one for a new photo
-            for (file length left) {
-                add 
-                if (first 3 bytes are 0xff 0xd8 0xff AND 4th byte is 0xe* (* denotes anything)) {
-                    the
+
+            // look through the blocks ahead of this one for a new photo
+            for (file length left)
+            {
+                add 1 to photo length
+                if (first 3 bytes are 0xff 0xd8 0xff AND 4th byte is 0xe* (* denotes anything))
+                {
+                    this is the photo length
+                    break
+                }
+            }
+            
         }
     }
 
