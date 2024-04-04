@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
     fread(infile, sizeof(RGBTRIPLE), width, inptr);
 
     /*
+    files = 0
     for (file length) {
         if (first 3 bytes are 0xff 0xd8 0xff AND 4th byte is 0xe* (* denotes anything))
         {
@@ -37,7 +38,10 @@ int main(int argc, char *argv[])
                     break
                 }
             }
-            
+
+            files++
+
+            Open output file with name ()
         }
     }
 
