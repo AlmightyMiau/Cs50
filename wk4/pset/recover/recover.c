@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
         if (first 3 bytes are 0xff 0xd8 0xff AND 4th byte is 0xe* (* denotes anything))
         {
             this is a photo; remember the pointer
-
+            int photolength = 0;
             // look through the blocks ahead of this one for a new photo
             for (file length left)
             {
@@ -39,10 +39,11 @@ int main(int argc, char *argv[])
                     break
                 }
             }
-            file name = files.jpg
+            filename = files.jpg
             files++
-            Open output file with name (file name)
+            Open output file with name (filename)
             Copy data from old to new file -->
+            int data[photolength][512]
             fread()
             fwrite()
         }
