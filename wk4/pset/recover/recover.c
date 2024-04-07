@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
             files++
             Open output file with name (filename)
             Copy data from old to new file -->
-            ulong data[photolength][512];
+            uint32_t data[photolength][16];
             fread(&data, )
             fwrite()
         }
