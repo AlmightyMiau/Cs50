@@ -1,5 +1,9 @@
+#include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <math.h>
 
 int main(int argc, char *argv[])
 {
@@ -20,7 +24,7 @@ int main(int argc, char *argv[])
     }
 
     int files = 0;
-    for (int i = 0; i < roundup(sizeof(infile)/512))
+    for (int i = 0; i < ceil(sizeof(infile)/512.0))
 
     /*
     files = 0
