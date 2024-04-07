@@ -7,5 +7,5 @@
 
 int main(int argc, char *argv[])
 {
-    printf("%f", ceil(sizeof(500000)/512.0) )
+    printf("%f\n", ceil(500000/512.0));
 }
