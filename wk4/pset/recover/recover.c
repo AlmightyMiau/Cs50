@@ -23,7 +23,8 @@ int main(int argc, char *argv[])
 
     /*
     files = 0
-    for (file length) {
+    for (file length)
+    {
         if (first 3 bytes are 0xff 0xd8 0xff AND 4th byte is 0xe* (* denotes anything))
         {
             this is a photo; remember the pointer
