@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
             Open output file with name (filename)
             Copy data from old to new file -->
             int data[photolength][512];
-            fread()
+            fread(&data, )
             fwrite()
         }
     }
