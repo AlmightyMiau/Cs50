@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     }
 
     int files = 0;
-    for (int i = 0; i < ceil(sizeof(infile)/512.0))
+    for (int i = 0; i < (int)ceil(sizeof(infile)/512.0), i++)
 
     /*
     files = 0
