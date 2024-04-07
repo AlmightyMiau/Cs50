@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
             Open output file with name (filename)
             Copy data from old to new file -->
             uint32_t data[photolength][16];
-            fread(&data, sizeof(uint32_t), 16, inptr)
+            fread(&data, sizeof(uint32_t), 16 * photolength, inptr)
             fwrite()
         }
     }
