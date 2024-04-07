@@ -21,6 +21,9 @@ int main(int argc, char *argv[])
 
     fread(infile, sizeof(RGBTRIPLE), width, inptr);
 
+    int files = 0;
+    for 
+
     /*
     files = 0
     for (file length)
