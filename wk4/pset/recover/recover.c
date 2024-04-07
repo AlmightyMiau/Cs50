@@ -42,10 +42,15 @@ int main(int argc, char *argv[])
             filename = files.jpg
             files++
             Open output file with name (filename)
-            Copy data from old to new file -->
+
+            // make buffer space to store the data
             uint32_t data[photolength][16];
-            fread(&data, sizeof(uint32_t), 16 * photolength, inptr)
-            fwrite()
+            // read the photo to data in blocks of 32 bits
+            fread(&data, sizeof(uint32_t), 16 * photolength, inptr);
+            // write the photo from data
+            fwrite(&data, sizeof(uint32_t), 16 * photolength, point);
+            // Close the photo file
+            // repeat this process for other photos
         }
     }
 
