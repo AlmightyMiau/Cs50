@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     {
         if (first 3 bytes are 0xff 0xd8 0xff AND 4th byte is 0xe* (* denotes anything))
         {
-            this is a photo; remember the pointer
+            this is a photo; remember the pointer (call it inptr)
             int photolength = 0;
             // look through the blocks ahead of this one for a new photo
             for (file length left)
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
             Open output file with name (filename)
             Copy data from old to new file -->
             uint32_t data[photolength][16];
-            fread(&data, )
+            fread(&data, sizeof(uint32_t), 16, inptr)
             fwrite()
         }
     }
