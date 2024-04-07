@@ -42,7 +42,6 @@ int main(int argc, char *argv[])
             files++
             Open output file with name (file name)
             Copy data from old to new file -->
-            
         }
     }
 
