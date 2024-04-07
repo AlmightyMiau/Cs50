@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     }
 
     int files = 0;
-    for
+    for (int i = 0; i < roundup(sizeof(infile)/512))
 
     /*
     files = 0
