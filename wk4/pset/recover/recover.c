@@ -19,10 +19,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    fread(infile, sizeof(RGBTRIPLE), width, inptr);
-
     int files = 0;
-    for 
+    for
 
     /*
     files = 0
