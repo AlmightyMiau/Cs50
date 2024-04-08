@@ -27,7 +27,13 @@ int main(int argc, char *argv[])
     while(fread(buffer, 1, 512, card) == 512)
     {
         // create new files from data
-        if
+        if (
+            buffer[0] == &&
+            buffer[1] == && 
+            buffer[2] == &&
+            buffer[3] >= &&
+            buffer[3] <=
+        )
     }
 
     /*
