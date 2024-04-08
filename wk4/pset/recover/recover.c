@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
             char *name[8];
             sprintf(name, "%i%i%i.jpg", files / 100, (files / 10) % 10, files % 10);
             fopen(name, "w");
+            fwrite(buffer, 1, 512, name);
         }
     }
 
