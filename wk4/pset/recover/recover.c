@@ -36,7 +36,8 @@ int main(int argc, char *argv[])
         )
         {
             // this is a jpeg, make a new file from it
-            sprintf()
+            char name[4];
+            sprintf(name, "%i%i%i", )
             fopen()
         }
     }
