@@ -20,11 +20,14 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    int files = 0;
-    int blocks = (int)ceil(sizeof(infile)/512.0);
-    for (int i = 0; i < blocks, i++)
+    // create a buffer to store a block of data
+    uint8_t buffer[512];
+    // int files = 0;
+    // int blocks = (int)ceil(sizeof(infile)/512.0);
+    while(fread(buffer, 1, 512, card) == 512)
     {
-        if (fread())
+        // create new files from data
+        
     }
 
     /*
