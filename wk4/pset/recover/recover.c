@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
             // this is a jpeg, make a new file from it
             files++;
             char *name[8];
-            sprintf(name, "%i%i%i.jpg", files / 100, (files / 10) % 10, (files % 10) % 10);
+            sprintf(name, "%i%i%i.jpg", files / 100, (files / 10) % 10, files % 10);
             fopen(name, "w");
         }
     }
