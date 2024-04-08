@@ -42,14 +42,14 @@ int main(int argc, char *argv[])
             files++;
             sprintf(name, "%i%i%i.jpg", files / 100, (files / 10) % 10, files % 10);
             FILE *point = fopen(name, "w");
-            fwrite(buffer, 1, 512, name);
-            fclose(name);
+            fwrite(buffer, 1, 512, point);
+            fclose(point);
         }
         else if(files >= 0) // if it is part of a previous picture, add to it
         {
-            fopen(name, "a");
-            fwrite(buffer, 1, 512, name);
-            fclose(name);
+            FILE *point = fopen(name, "a");
+            fwrite(buffer, 1, 512, point);
+            fclose(point);
         }
     }
     fclose(card);
