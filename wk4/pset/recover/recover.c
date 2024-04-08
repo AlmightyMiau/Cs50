@@ -24,7 +24,11 @@ int main(int argc, char *argv[])
     }
 
     int files = 0;
-    for (int i = 0; i < (int)ceil(sizeof(infile)/512.0), i++)
+    int blocks = (int)ceil(sizeof(infile)/512.0);
+    for (int i = 0; i < blocks, i++)
+    {
+        
+    }
 
     /*
     files = 0
