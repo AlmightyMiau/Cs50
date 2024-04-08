@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     int blocks = (int)ceil(sizeof(infile)/512.0);
     for (int i = 0; i < blocks, i++)
     {
-        
+        if (fread())
     }
 
     /*
