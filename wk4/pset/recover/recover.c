@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
     // create a buffer to store a block of data
     uint8_t buffer[512];
     int files = -1;
+    char *name[8];
     // int blocks = (int)ceil(sizeof(infile)/512.0);
     while(fread(buffer, 1, 512, card) == 512)
     {
@@ -37,11 +38,16 @@ int main(int argc, char *argv[])
         {
             // this is a jpeg, make a new file from it
             files++;
-            char *name[8];
             sprintf(name, "%i%i%i.jpg", files / 100, (files / 10) % 10, files % 10);
             fopen(name, "w");
             fwrite(buffer, 1, 512, name);
-            
+            fclose(name);
+        }
+        else if(files >= 0)
+        {
+            fopen(name, "a");
+            fwrite(buffer, 1, 512, name);
+            fclose(name);
         }
     }
 
