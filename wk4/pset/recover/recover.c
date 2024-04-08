@@ -20,11 +20,12 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // create a buffer to store a block of data
+    // initialize variables for use in restoring jpegs
     uint8_t buffer[512];
     int files = -1;
     char *name[8];
-    // int blocks = (int)ceil(sizeof(infile)/512.0);
+
+    //
     while(fread(buffer, 1, 512, card) == 512)
     {
         // create new files from data
@@ -50,6 +51,7 @@ int main(int argc, char *argv[])
             fclose(name);
         }
     }
+    fclose(card);
 
     /*
     files = 0
@@ -91,5 +93,4 @@ int main(int argc, char *argv[])
 
     */
 
-   fclose(card);
 }
