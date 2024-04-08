@@ -25,10 +25,10 @@ int main(int argc, char *argv[])
     int files = -1;
     char *name[8];
 
-    //
+    // restoring jpegs
     while(fread(buffer, 1, 512, card) == 512)
     {
-        // create new files from data
+        // check if this is a new picture
         if (
             buffer[0] == 0xff &&
             buffer[1] == 0xd8 &&
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
             fwrite(buffer, 1, 512, name);
             fclose(name);
         }
-        else if(files >= 0)
+        else if(files >= 0) // if it is part of a previous picture, add to it
         {
             fopen(name, "a");
             fwrite(buffer, 1, 512, name);
