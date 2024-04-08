@@ -12,12 +12,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Remember filenames
-    char *infile = argv[optind];
-
     // Open input file
-    FILE *inptr = fopen(infile, "r");
-    if (inptr == NULL)
+    FILE *card = fopen(argv[1], "r");
+    if (card == NULL)
     {
         printf("Could not open %s.\n", infile);
         return 1;
@@ -55,7 +52,7 @@ int main(int argc, char *argv[])
             // make buffer space to store the data
             uint32_t data[photolength][16];
             // read the photo to data in blocks of 32 bits
-            fread(&data, sizeof(uint32_t), 16 * photolength, inptr);
+            fread(&data, sizeof(uint32_t), 16 * photolength, card);
             // write the photo from data
             fwrite(&data, sizeof(uint32_t), 16 * photolength, point);
             // Close the photo file
@@ -69,5 +66,5 @@ int main(int argc, char *argv[])
 
     */
 
-   fclose(inptr);
+   fclose(card);
 }
