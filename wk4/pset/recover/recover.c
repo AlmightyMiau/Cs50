@@ -35,7 +35,8 @@ int main(int argc, char *argv[])
             buffer[3] <= 0xef
         )
         {
-
+            // this is a jpeg, make a new file from it
+            
         }
     }
 
