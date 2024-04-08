@@ -32,6 +32,7 @@ int main(int argc, char *argv[])
     for (file length)
     {
         if (first 3 bytes are 0xff 0xd8 0xff AND 4th byte is 0xe* (* denotes anything))
+        fread(ptr, )
         {
             this is a photo; remember the pointer (call it point)
             int photolength = 0;
