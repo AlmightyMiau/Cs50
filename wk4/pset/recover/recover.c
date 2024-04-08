@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <ctype.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -23,7 +24,7 @@ int main(int argc, char *argv[])
     // initialize variables for use in restoring jpegs
     uint8_t buffer[512];
     int files = -1;
-    char *name[8];
+    char name[8];
 
     // restoring jpegs
     while(fread(buffer, 1, 512, card) == 512)
