@@ -8,6 +8,5 @@
 
 int main(void)
 {
-    int i = 000;
-    printf("%i", i);
+    
 }
