@@ -13,6 +13,8 @@ int main(void)
     list[1] = 2;
     list[2] = 3;
 
+    int *tmp = malloc(4 * sizeof(int));
+
     for (int i = 0; i < 3; i++)
     {
         printf("%i\n", list[i]);
