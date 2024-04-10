@@ -14,6 +14,10 @@ int main(void)
     list[2] = 3;
 
     int *tmp = malloc(4 * sizeof(int));
+    if (list == NULL)
+    {
+        return 1;
+    }
 
     for (int i = 0; i < 3; i++)
     {
