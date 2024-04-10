@@ -15,7 +15,7 @@ int main(void)
 
     int *tmp = malloc(4 * sizeof(int));
     if (list == NULL)
-        {
+    {
         return 1;
     }
 
