@@ -14,8 +14,13 @@ typedef struct node
 
 int main(void)
 {
+    node *n = malloc(sizeof(node));
     n->number = 1;
     n->next = NULL;
     list = n;
-    // this makes
+
+    node *n = malloc(sizeof(node));
+    n->number = 2;
+    n->next = list;
+
 }
