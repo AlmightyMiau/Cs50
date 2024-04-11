@@ -20,6 +20,17 @@ int main(void)
         return 1;
     }
 
+    for (int i  0; i < 3; i++)
+    {
+        tmp[i] = list[i];
+    }
+    tmp[3] = 4;
+
+
+
+    free(list);
+    list = tmp;
+
     for (int i = 0; i < 3; i++)
     {
         printf("%i\n", list[i]);
