@@ -1,0 +1,33 @@
+#include <cs50.h>
+#include <ctype.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+typedef struct node
+{
+    int number;
+    struct node *next;
+} node;
+
+int main(int argc, char *argv[])
+{
+    node *list = NULL;
+
+    for (int i = 1; i < argc; i++)
+    {
+        int number = atoi(argv[i]);
+
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            // free memory
+            return 1;
+        }
+
+        n->number = number;
+        n->
+    }
+}

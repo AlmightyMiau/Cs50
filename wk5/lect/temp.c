@@ -22,5 +22,7 @@ int main(void)
     node *n = malloc(sizeof(node));
     n->number = 2;
     n->next = list;
+    list = n;
 
+    // This creates a linked list where 2 points to 1
 }
