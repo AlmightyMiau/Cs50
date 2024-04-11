@@ -20,7 +20,7 @@ int main(void)
         return 1;
     }
 
-    for (int i  0; i < 3; i++)
+    for (int i = 0; i < 3; i++)
     {
         tmp[i] = list[i];
     }
@@ -31,8 +31,11 @@ int main(void)
     free(list);
     list = tmp;
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 4; i++)
     {
         printf("%i\n", list[i]);
     }
+
+    free(list);
+    return 0;
 }
