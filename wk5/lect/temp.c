@@ -16,5 +16,6 @@ int main(void)
 {
     n->number = 1;
     n->next = NULL;
-    // this 
+    list = n;
+    // this makes
 }
