@@ -32,11 +32,13 @@ unsigned int hash(const char *word)
     return toupper(word[0]) - 'A';
 }
 
+FILE *file = NULL;
+
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *file = fopen(dictionary, "r");
+    file = fopen(dictionary, "r");
     if (file != NULL)
     {
         return true;
