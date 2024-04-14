@@ -53,7 +53,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    while (fread(file))
+    while (fread(file, 1))
     return 0;
 }
 
