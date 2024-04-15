@@ -54,8 +54,14 @@ unsigned int size(void)
 {
     // TODO
     char c;
-    while (fread(&c, 1, 1, ))
-    return 0;
+    while (fread(&c, 1, 1, file))
+    {
+        if (c == "\n")
+        {
+            n++;
+        }
+    }
+    return n;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
