@@ -71,7 +71,8 @@ bool load(const char *dictionary)
         int val = hash(word);
         if (table(val)->next != NULL)
         {
-            
+            char  = 0;
+            while()
         }
     }
 
