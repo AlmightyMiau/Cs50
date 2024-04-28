@@ -20,7 +20,7 @@ const unsigned int N = 26;
 node *table[N];
 
 // Size integer
-int size = 0;
+int siz = 0;
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -69,10 +69,10 @@ bool load(const char *dictionary)
     char word[LENGTH + 1];
     // use fscanf(file, "%s", word) to grab words
     // check for ended file
-    while(fscanf(source, "%s", word) != "E0F")
+    while(fscanf(source, "%s", word) != E0F)
     {
         // update size int
-        size++;
+        siz++;
         // create new node
         // use malloc
         node *ptr = malloc(sizefo(node));
@@ -104,7 +104,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    return size;
+    return siz;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
