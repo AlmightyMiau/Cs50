@@ -51,12 +51,23 @@ bool load(const char *dictionary)
     }
 
     //read each word in dictionary
-    char c;
-    while(fscanf(source, "%s", word) != )
+    char word[LENGTH + 1];
+    while(fscanf(source, "%s", word) != "E0F")
+    {
+        malloc
+    }
 
     /*
     use fscanf(file, "%s", word) to grab words
-    
+        check for ended file
+    create new node
+        use malloc
+            check if return is NULL
+        copy word from fscanf into node using strcpy
+    use hash function
+        function takes string and returns index
+    insert node into hash table
+        HOW
     */
 
     // Close the dictionary file
