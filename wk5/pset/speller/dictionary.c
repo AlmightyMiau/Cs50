@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -93,7 +94,7 @@ bool load(const char *dictionary)
         {
             ptr->next = table[val]->next;
         }
-        table[val]->next = *ptr;
+        table[val]->next = ptr;
     }
 
     // Close the dictionary file
