@@ -48,7 +48,9 @@ bool load(const char *dictionary)
 
     //read each word in dictionary
     char c;
+    char *tempword
     while (fread(&c, 1, 1, source) != 0) {
+        if ()
 
     }
 
