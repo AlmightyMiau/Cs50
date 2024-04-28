@@ -67,6 +67,8 @@ bool load(const char *dictionary)
         }
         // copy word from fscanf into node using strcpy
         strcpy(ptr->word, word);
+        hash(word);
+        ptr->next = 
     }
 
     /*
