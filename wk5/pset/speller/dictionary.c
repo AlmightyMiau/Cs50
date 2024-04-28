@@ -52,21 +52,22 @@ bool load(const char *dictionary)
 
     //read each word in dictionary
     char word[LENGTH + 1];
+    // use fscanf(file, "%s", word) to grab words
+    // check for ended file
     while(fscanf(source, "%s", word) != "E0F")
     {
+        // create new node
         char *ptr = malloc(sizefo(node));
         if (ptr == NULL)
         {
             fclose(source);
             return false;
         }
-        
+        strcpy()
     }
 
     /*
-    use fscanf(file, "%s", word) to grab words
-        check for ended file
-    create new node
+
         use malloc
             check if return is NULL
         copy word from fscanf into node using strcpy
