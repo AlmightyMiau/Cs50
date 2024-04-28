@@ -25,9 +25,9 @@ int size = 0;
 bool check(const char *word)
 {
     // hash word to find bucket
-    int head = hash(word);
-    node *current = table(head);
+    node *current = table(hash(word));
 
+    // check all nodes in the bucket
     while (current != NULL)
     {
         // check if this is the word
@@ -35,7 +35,6 @@ bool check(const char *word)
         {
             return true;
         }
-
         // move on to next node
         current = current->next;
     }
