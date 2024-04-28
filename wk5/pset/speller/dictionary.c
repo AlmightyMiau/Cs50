@@ -38,8 +38,6 @@ unsigned int hash(const char *word)
     return val %= 26;
 }
 
-
-// TODO
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
@@ -77,14 +75,8 @@ bool load(const char *dictionary)
             ptr->next = table(val)->next;
         }
         table(val)->next = *ptr;
-    }
 
-    /*
-    use hash function
-        function takes string and returns index
-    insert node into hash table
-        for whatever hash index, go to end and put it there
-    */
+    }
 
     // Close the dictionary file
     fclose(source);
