@@ -32,6 +32,9 @@ bool check(const char *word)
     {
         // check if this is the word
         if (current->word == word)
+        {
+            return true;
+        }
 
         // move on to next node
         current = current->next;
