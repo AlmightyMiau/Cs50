@@ -124,5 +124,5 @@ bool unload(void)
             free(this);
         }
     }
-    return false;
+    return true;
 }
