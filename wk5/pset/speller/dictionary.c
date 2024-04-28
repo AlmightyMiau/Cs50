@@ -57,7 +57,7 @@ bool load(const char *dictionary)
     while(fscanf(source, "%s", word) != "E0F")
     {
         // create new node
-        char *ptr = malloc(sizefo(node));
+        node *ptr = malloc(sizefo(node));
         if (ptr == NULL)
         {
             fclose(source);
