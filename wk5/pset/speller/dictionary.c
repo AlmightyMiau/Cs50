@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -113,7 +114,7 @@ bool unload(void)
     for (int i = 0; i < N; i++)
     {
         // while there's more in the bucket
-        node *current = table(i);
+        node *current = table;
         while (current != NULL)
         {
             // record position of this node
