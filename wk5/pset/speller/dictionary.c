@@ -74,8 +74,9 @@ bool load(const char *dictionary)
         // put new node at begining of bucket
         if (table(val)->next != NULL)
         {
-            ptr->next = table(0)->next;
+            ptr->next = table(val)->next;
         }
+        table(val)->next = *ptr;
     }
 
     /*
