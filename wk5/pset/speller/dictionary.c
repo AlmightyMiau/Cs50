@@ -71,7 +71,7 @@ bool load(const char *dictionary)
         ptr->next = NULL;
         // hash the word to find the bucket it goes in
         int val = hash(word);
-        // 
+        // put 
         if (table(val)->next != NULL)
         {
             char  = 0;
