@@ -57,20 +57,19 @@ bool load(const char *dictionary)
     while(fscanf(source, "%s", word) != "E0F")
     {
         // create new node
+        // use malloc
         node *ptr = malloc(sizefo(node));
+        // check if return is NULL
         if (ptr == NULL)
         {
             fclose(source);
             return false;
         }
-        strcpy()
+        // copy word from fscanf into node using strcpy
+        strcpy(ptr->word, word);
     }
 
     /*
-
-        use malloc
-            check if return is NULL
-        copy word from fscanf into node using strcpy
     use hash function
         function takes string and returns index
     insert node into hash table
