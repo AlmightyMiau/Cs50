@@ -24,7 +24,9 @@ int size = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    // hash word to find bucket
+    int bucket = hash(word);
+    for(int i = 0; )
 
     return false;
 }
