@@ -26,7 +26,7 @@ int size = 0;
 bool check(const char *word)
 {
     // hash word to find bucket
-    node *current = table(hash(word));
+    node *current = table[hash(word)];
 
     // check all nodes in the bucket
     while (current != NULL)
@@ -89,11 +89,11 @@ bool load(const char *dictionary)
         // hash the word to find the bucket it goes in
         int val = hash(word);
         // put new node at begining of bucket
-        if (table(val)->next != NULL)
+        if (table[val]->next != NULL)
         {
-            ptr->next = table(val)->next;
+            ptr->next = table[val]->next;
         }
-        table(val)->next = *ptr;
+        table[val]->next = *ptr;
     }
 
     // Close the dictionary file
@@ -114,7 +114,7 @@ bool unload(void)
     for (int i = 0; i < N; i++)
     {
         // while there's more in the bucket
-        node *current = table;
+        node *current = table[i];
         while (current != NULL)
         {
             // record position of this node
