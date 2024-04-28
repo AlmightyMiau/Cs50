@@ -67,15 +67,16 @@ bool load(const char *dictionary)
         }
         // copy word from fscanf into node using strcpy
         strcpy(ptr->word, word);
-        hash(word);
-        ptr->next = 
+        ptr->next = NULL;
+        int val = hash(word);
+
     }
 
     /*
     use hash function
         function takes string and returns index
     insert node into hash table
-        HOW
+        for whatever hash index, go to end and put it there
     */
 
     // Close the dictionary file
