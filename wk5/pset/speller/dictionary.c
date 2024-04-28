@@ -69,7 +69,10 @@ bool load(const char *dictionary)
         strcpy(ptr->word, word);
         ptr->next = NULL;
         int val = hash(word);
-
+        if (table(val)->next != NULL)
+        {
+            
+        }
     }
 
     /*
