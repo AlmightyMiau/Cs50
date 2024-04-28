@@ -116,9 +116,12 @@ bool unload(void)
         node *current = table(i);
         while (current != NULL)
         {
+            // record position of this node
+            node *this = current;
             // record position of next node
             current = current->next;
             // free this node
+            free(this);
         }
     }
     return false;
