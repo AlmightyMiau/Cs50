@@ -52,7 +52,7 @@ bool load(const char *dictionary)
 
     //read each word in dictionary
     char c;
-    fscanf(file, "%s", &c)
+    while(fscanf(source, "%s", word) != )
 
     // Close the dictionary file
     fclose(source);
