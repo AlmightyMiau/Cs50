@@ -25,8 +25,10 @@ int size = 0;
 bool check(const char *word)
 {
     // hash word to find bucket
-    int bucket = hash(word);
-    for(int i = 0; )
+    int head = hash(word);
+    node *current = table(head);
+    
+
 
     return false;
 }
