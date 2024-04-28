@@ -71,11 +71,10 @@ bool load(const char *dictionary)
         ptr->next = NULL;
         // hash the word to find the bucket it goes in
         int val = hash(word);
-        // put 
+        // put new node at begining of bucket
         if (table(val)->next != NULL)
         {
-            char  = 0;
-            while()
+            ptr->next = table(0)->next;
         }
     }
 
