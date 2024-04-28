@@ -54,6 +54,11 @@ bool load(const char *dictionary)
     char c;
     while(fscanf(source, "%s", word) != )
 
+    /*
+    use fscanf(file, "%s", word) to grab words
+    
+    */
+
     // Close the dictionary file
     fclose(source);
 }
