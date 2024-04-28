@@ -69,13 +69,13 @@ bool load(const char *dictionary)
     char word[LENGTH + 1];
     // use fscanf(file, "%s", word) to grab words
     // check for ended file
-    while(fscanf(source, "%s", word) != E0F)
+    while(fscanf(source, "%s", word) != 0)
     {
         // update size int
         siz++;
         // create new node
         // use malloc
-        node *ptr = malloc(sizefo(node));
+        node *ptr = malloc(sizeof(node));
         // check if return is NULL
         if (ptr == NULL)
         {
