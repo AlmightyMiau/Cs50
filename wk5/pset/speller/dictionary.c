@@ -44,12 +44,11 @@ bool check(const char *word)
     return false;
 }
 
-
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    // (sum of (letter - 'A') % 26) of a word to get a value of where to store it in the hash table
+    return word[0] % 26;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -115,8 +114,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-    return 0;
+    return siz;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
