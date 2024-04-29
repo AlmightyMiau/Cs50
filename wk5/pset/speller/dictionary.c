@@ -26,9 +26,24 @@ int siz = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    // hash word to find bucket
+    int val = hash(word);
+    node *current = table[val];
+
+    // check all nodes in the bucket
+    while (current != NULL)
+    {
+        // check if this is the word
+        if (strcmp(current->word, word) == 0)
+        {
+            return true;
+        }
+        current = current->next;
+    }
+
     return false;
 }
+
 
 // Hashes word to a number
 unsigned int hash(const char *word)
