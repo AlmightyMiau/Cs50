@@ -65,8 +65,8 @@ bool load(const char *dictionary)
 {
     // initialize the table
     for (int i = 0; i < N; i++) {
+        // malloc size of next
         table[i]->next = 0;
-        // table[i]->word = "";
     }
 
     // Open dictionary file
