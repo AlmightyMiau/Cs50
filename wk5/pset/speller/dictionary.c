@@ -99,12 +99,8 @@ bool load(const char *dictionary)
         if (table[val] != NULL)
         {
             ptr->next = table[val];
-            table[val] = ptr;
         }
-        else
-        {
             table[val] = ptr;
-        }
     }
 
     // Close the dictionary file
