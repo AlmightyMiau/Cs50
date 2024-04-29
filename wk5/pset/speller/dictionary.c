@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -30,19 +31,11 @@ bool check(const char *word)
     int val = hash(word);
     node *current = table[val];
 
-    // buffer string becasue word is const
-    char *buff[strlen(word)];
-    // make word lowercase
-    for (int i = 0; word[i] != '\0'; i++)
-    {
-        buff[i] = (tolower(word[i]));
-    }
-
     // check all nodes in the bucket
     while (current != NULL)
     {
         // check if this is the word
-        if (strcmp(current->word, word) == 0)
+        if (strcasecmp(current->word, word) == 0)
         {
             return true;
         }
