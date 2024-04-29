@@ -53,7 +53,7 @@ unsigned int hash(const char *word)
     // {
     //     val += (word[i] % 26);
     // }
-    return toupper(word[0]) % 26;
+    return (toupper(word[0]) % 26);
 }
 
 // Loads dictionary into memory, returning true if successful, else false
