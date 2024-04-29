@@ -88,7 +88,7 @@ bool load(const char *dictionary)
             return false;
         }
         // copy word from fscanf into node using strcpy
-        strcpy(ptr->word);
+        strcpy(ptr->word, word);
         // set the new ptr
         ptr->next = NULL;
         // hash the word to find the bucket it goes in
