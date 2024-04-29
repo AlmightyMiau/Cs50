@@ -66,6 +66,7 @@ bool load(const char *dictionary)
     // initialize the table
     for (int i = 0; i < N; i++) {
         table[i]->next = NULL;
+        // table[i]->word = "";
     }
 
     // Open dictionary file
