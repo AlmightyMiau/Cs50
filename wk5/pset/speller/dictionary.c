@@ -80,7 +80,7 @@ bool load(const char *dictionary)
         siz++;
         // create new node
         // use malloc
-        node *ptr = calloc(sizeof(node));
+        node *ptr = malloc(sizeof(node));
         // check if return is NULL
         if (ptr == NULL)
         {
