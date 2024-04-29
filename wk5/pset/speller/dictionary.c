@@ -34,14 +34,9 @@ bool check(const char *word)
     while (current != NULL)
     {
         // check if this is the word
-        if (current->word word)
+        if (strcmp(current->word, word) == 0)
         {
             return true;
-        }
-        // move on to next node
-        if (current->next == NULL)
-        {
-            return false;
         }
         current = current->next;
     }
@@ -67,7 +62,7 @@ bool load(const char *dictionary)
     // initialize the table
     for (int i = 0; i < N; i++) {
         // malloc size of next
-        table[i]->next = 0;
+        table[i] = NULL;
     }
 
     // Open dictionary file
