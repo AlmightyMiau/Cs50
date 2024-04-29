@@ -1,12 +1,12 @@
 // Implements a dictionary's functionality
 
+#include "dictionary.h"
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
-#include "dictionary.h"
 
 // Represents a node in a hash table
 typedef struct node
@@ -55,7 +55,8 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // initialize the table
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++)
+    {
         // malloc size of next
         table[i] = NULL;
     }
@@ -67,11 +68,11 @@ bool load(const char *dictionary)
         return false;
     }
 
-    //read each word in dictionary
+    // read each word in dictionary
     char word[LENGTH + 1];
     // use fscanf(file, "%s", word) to grab words
     // check for ended file
-    while(fscanf(source, "%s", word) == 1)
+    while (fscanf(source, "%s", word) == 1)
     {
         // update size int
         siz++;
@@ -103,7 +104,6 @@ bool load(const char *dictionary)
             ptr->next = table[val];
             table[val] = ptr;
         }
-
     }
 
     // Close the dictionary file
