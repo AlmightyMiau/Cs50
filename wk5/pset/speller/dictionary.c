@@ -74,7 +74,7 @@ bool load(const char *dictionary)
     char word[LENGTH + 1];
     // use fscanf(file, "%s", word) to grab words
     // check for ended file
-    while(fscanf(source, "%s", word) != 0)
+    while(fscanf(source, "%s", word) == 1)
     {
         // update size int
         siz++;
@@ -88,7 +88,7 @@ bool load(const char *dictionary)
             return false;
         }
         // copy word from fscanf into node using strcpy
-        strcpy(word, ptr->word);
+        strcpy(ptr->word);
         // set the new ptr
         ptr->next = NULL;
         // hash the word to find the bucket it goes in
