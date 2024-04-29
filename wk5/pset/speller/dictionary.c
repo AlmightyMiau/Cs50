@@ -63,6 +63,11 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    // initialize the table
+    for (int i = 0; i < N; i++) {
+        table[i]->next = NULL;
+    }
+
     // Open dictionary file
     FILE *source = fopen(dictionary, "r");
     if (source == NULL)
