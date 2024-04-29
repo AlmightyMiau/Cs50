@@ -102,6 +102,20 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
-    return false;
+    // for every bucket
+    for (int i = 0; i < N; i++)
+    {
+        // while there's more in the bucket
+        node *current = table[i];
+        while (current != NULL)
+        {
+            // record position of this node
+            node *this = current;
+            // record position of next node
+            current = current->next;
+            // free this node
+            free(this);
+        }
+    }
+    return true;
 }
