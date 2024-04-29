@@ -96,11 +96,19 @@ bool load(const char *dictionary)
         // hash the word to find the bucket it goes in
         int val = hash(ptr->word);
         // put new node at begining of bucket
-        if (table[val] != NULL)
+        if (table[val] == NULL)
         {
-            ptr->next = table[val];
-        }
+            // if empty put it there
             table[val] = ptr;
+        }
+        else
+        {
+            // if not empty move the current first one down,
+            // then put the new one there
+            ptr->next = table[val];
+            table[val] = ptr;
+        }
+
     }
 
     // Close the dictionary file
