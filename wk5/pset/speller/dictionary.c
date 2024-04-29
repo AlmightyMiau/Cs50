@@ -31,11 +31,11 @@ bool check(const char *word)
     node *current = table[val];
 
     // buffer string becasue word is const
-    char *buff
+    char *buff[strlen(word)];
     // make word lowercase
     for (int i = 0; word[i] != '\0'; i++)
     {
-        word[i] = tolower(word[i]);
+        buff[i] = (tolower(word[i]));
     }
 
     // check all nodes in the bucket
