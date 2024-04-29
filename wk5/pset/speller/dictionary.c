@@ -65,7 +65,7 @@ bool load(const char *dictionary)
 {
     // initialize the table
     for (int i = 0; i < N; i++) {
-        table[i]->next = NULL;
+        table[i] = NULL;
         // table[i]->word = "";
     }
 
@@ -100,14 +100,14 @@ bool load(const char *dictionary)
         // hash the word to find the bucket it goes in
         int val = hash(ptr->word);
         // put new node at begining of bucket
-        if (table[val]->next != NULL)
+        if (table[val] != NULL)
         {
-            ptr->next = table[val]->next;
-            table[val]->next = ptr;
+            ptr->next = table[val];
+            table[val] = ptr;
         }
         else
         {
-            table[val]->next = ptr;
+            table[val] = ptr;
         }
     }
 
