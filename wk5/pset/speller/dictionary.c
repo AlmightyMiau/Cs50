@@ -38,6 +38,10 @@ bool check(const char *word)
             return true;
         }
         // move on to next node
+        if (current->next == NULL)
+        {
+            return false;
+        }
         current = current->next;
     }
 
