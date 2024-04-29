@@ -27,13 +27,14 @@ int siz = 0;
 bool check(const char *word)
 {
     // hash word to find bucket
-    node *current = table[hash(word)];
+    int val = hash(word);
+    node *current = table[val];
 
     // check all nodes in the bucket
     while (current != NULL)
     {
         // check if this is the word
-        if (current->word == word)
+        if (current->word word)
         {
             return true;
         }
