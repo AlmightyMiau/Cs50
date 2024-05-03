@@ -1,12 +1,24 @@
 # import cs50
-
+#
 # x = cs50.get_int("x: ")
 # y = cs50.get_int("y: ")
-
+#
 # print(x + y)
 
-x = int(input("x: "))
-y = int(input("y: "))
+# x = int(input("x: "))
+# y = int(input("y: "))
 
-z = x / y
-print(f"{z:.50f}")
+# z = x / y
+# print(f"{z:.50f}")
+
+def get_int(prompt):
+    return int(input(prompt))
+
+
+def main():
+    x = get_int("x: ")
+    y = get_int("y: ")
+
+    print(x + y)
+
+main()
