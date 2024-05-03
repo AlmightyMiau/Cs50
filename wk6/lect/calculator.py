@@ -7,7 +7,7 @@
 
 # x = int(input("x: "))
 # y = int(input("y: "))
-
+#
 # z = x / y
 # print(f"{z:.50f}")
 
@@ -20,5 +20,6 @@ def main():
     y = get_int("y: ")
 
     print(x + y)
+
 
 main()
