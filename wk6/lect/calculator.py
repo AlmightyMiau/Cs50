@@ -12,7 +12,11 @@
 # print(f"{z:.50f}")
 
 def get_int(prompt):
-    return int(input(prompt))
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Not an integer!!! :(:(:(")
 
 
 def main():
