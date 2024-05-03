@@ -5,6 +5,7 @@ s = input("Do you agree? ")
 # elif s == 'N' or s == 'n':
 #     print("Not agreed")
 
-if s in ['y', 'yes']:
-    print('Agreed')
-
+# if s in ['y', 'yes']:
+#     print('Agreed')
+# elif s in ['n', 'no']:
+#     print('Not agreed')
