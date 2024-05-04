@@ -7,10 +7,10 @@
 
 from cs50 import get_int
 
-size = 0
+size = 16
 
-# while size < 1 and size > 8:
-size = get_int("Height: ")
+while (size < 1) and (size > 8):
+    size = get_int("Height: ")
 
 for i in range(size - 1):
     print(" " * (size - i - 1), "#" * (i + 1), "", "#" * (i + 1), " " * (size - i - 1))
