@@ -1,10 +1,3 @@
-# import get_int
-# get input using get_int
-# make sure the input is between 1 and 8
-# print the pyramids
-# for i in range(input - 1):
-    # print(" " * (input - i - 1), "#" * i + 1)
-
 from cs50 import get_int
 
 
@@ -19,3 +12,10 @@ for i in range(size):
     print("  ", end='')
     print("#" * (i + 1))
 
+
+# import get_int
+# get input using get_int
+# make sure the input is between 1 and 8
+# print the pyramids
+# for i in range(input - 1):
+# print(" " * (input - i - 1), "#" * i + 1)
