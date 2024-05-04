@@ -9,4 +9,6 @@ c = ''
 
 for i in range(len(text)):
     c = text[i]
-    
+    j = ord(c)
+    if c == '.' or c == '!' or c == '?':
+        s
