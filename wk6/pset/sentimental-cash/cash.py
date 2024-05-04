@@ -5,27 +5,27 @@ while True:
     if cents > 0:
         break
 
-print(cents)
+# print(cents)
 
 quarters = cents // 0.25
 cents -= quarters * 0.25
 cents = round(cents, 2)
-print(cents)
+# print(cents)
 
 dimes = cents // 0.10
 cents -= dimes * 0.10
 cents = round(cents, 2)
-print(cents)
+# print(cents)
 
 nickels = cents // 0.05
 cents -= nickels * 0.05
 cents = round(cents, 2)
-print(cents)
+# print(cents)
 
 pennies = cents // 0.01
 cents -= pennies * 0.01
 cents = round(cents, 2)
-print(cents)
+# print(cents)
 
 coins = quarters + dimes + nickels + pennies
 print(int(coins))
