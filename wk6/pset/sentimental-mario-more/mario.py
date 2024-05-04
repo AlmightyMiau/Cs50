@@ -14,5 +14,9 @@ while True:
         break
 
 for i in range(size):
-    print(" " * (size - i - 1), "#" * (i + 1), "", "#" * (i + 1), " " * (size - i - 1))
+    print(' ' * (size - i - 1), end='')
+    print("#" * (i + 1), end='')
+    print("  ", end='')
+    print("#" * (i + 1), end='')
+    print(" " * (size - i - 1))
 
