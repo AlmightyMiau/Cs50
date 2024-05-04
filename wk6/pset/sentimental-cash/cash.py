@@ -5,5 +5,5 @@ while True:
     if cents > 0:
         break
 
-quarters = (cents / 25).round()
+quarters = round((cents / 25), 2)
 cents =
