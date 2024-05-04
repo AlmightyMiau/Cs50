@@ -5,5 +5,5 @@ while True:
     if cents > 0:
         break
 
-quarters = round((cents / 25), 2)
+quarters = cents / 25
 cents =
