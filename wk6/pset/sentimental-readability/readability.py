@@ -9,3 +9,4 @@ c = ''
 
 for i in range(len(text)):
     c = text[i]
+    
