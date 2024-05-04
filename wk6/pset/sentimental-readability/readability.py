@@ -22,4 +22,14 @@ for i in range(len(text)):
     elif 96 < j and j < 123:
         l += 1
 
-print(s, w, l, c)
+L = l / w * 100
+S = s / w * 100
+index = 0.0588 * L - 0.296 * S - 15.8
+if index < 1:
+    print("Before Grade 1")
+else:
+    ans = round(index)
+    if ans >= 16:
+        print("Grade 16+")
+    else:
+        print("Grade", ans)
