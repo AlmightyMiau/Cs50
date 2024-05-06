@@ -17,6 +17,7 @@ def main():
     return
 
 
+# Given entire DNA sequence and an STR (ACTG) as inputs, outputs the longest repitition
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
 
