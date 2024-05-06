@@ -25,6 +25,7 @@ def main():
             rows.append(row)
 
     # TODO: Read DNA sequence file into a variable
+    database = '' + sys.argv[1]
     sequence = ''
     with open(sys.argv[1]) as file:
         sequence = sequence.join(file.readlines())
