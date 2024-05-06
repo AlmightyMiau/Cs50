@@ -9,6 +9,8 @@ def main():
         print("Oopsie you used the wrong number of arguments D: you should use two next time :3")
         return
 
+    if sys.argv[0].
+
     # TODO: Read database file into a variable
 
     # TODO: Read DNA sequence file into a variable
