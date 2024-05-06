@@ -25,10 +25,12 @@ def main():
             rows.append(row)
 
     # TODO: Read DNA sequence file into a variable
+    sequence = ''
     with open(argv[1]) as file:
-        
+        sequence = sequence.join(file.readlines())
 
     # TODO: Find longest match of each STR in DNA sequence
+    # 
 
     # TODO: Check database for matching profiles
 
