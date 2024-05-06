@@ -5,7 +5,7 @@ import sys
 def main():
 
     # TODO: Check for command-line usage
-    if len(sys.argv) < 1 or len(sys.argv) > 2:
+    if len(sys.argv) != 1 and len(sys.argv) != 2:
         print("Oopsie you used the wrong number of arguments D: you should use two next time :3")
         return
     # check to see if arg 0 is a csv file
