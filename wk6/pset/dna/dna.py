@@ -19,19 +19,19 @@ def main():
 
     # TODO: Read database file into a variable
     rows = []
-    with open(sys.argv[0]) as file:
+    with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
             rows.append(row)
 
     # TODO: Read DNA sequence file into a variable
-    database = '' + sys.argv[1]
+    database = 'databases/' + sys.argv[2]
     sequence = ''
-    with open(sys.argv[1]) as file:
+    with open(database) as file:
         sequence = sequence.join(file.readlines())
 
     # TODO: Find longest match of each STR in DNA sequence
-    str1 = rows[0][2]
+    str1 = rows[0]
     print(str1)
 
     # TODO: Check database for matching profiles
