@@ -9,7 +9,13 @@ def main():
         print("Oopsie you used the wrong number of arguments D: you should use two next time :3")
         return
 
-    if sys.argv[0].
+    if not sys.argv[0].endswith('.csv'):
+        print("Oh no, that isn't a csv file :( that won't work can you fix that please?")
+        return
+
+    if not sys.argv[1].endswith('.txt'):
+        print("Oh no, that isn't a txt file :( that won't work can you fix that please?")
+        return
 
     # TODO: Read database file into a variable
 
