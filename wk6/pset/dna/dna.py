@@ -26,7 +26,7 @@ def main():
 
     # TODO: Read DNA sequence file into a variable
     with open() as file:
-
+        
 
     # TODO: Find longest match of each STR in DNA sequence
 
