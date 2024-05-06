@@ -30,7 +30,7 @@ def main():
         sequence = sequence.join(file.readlines())
 
     # TODO: Find longest match of each STR in DNA sequence
-    # str = 
+    str1 = rows
 
     # TODO: Check database for matching profiles
 
