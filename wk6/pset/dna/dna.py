@@ -6,7 +6,8 @@ def main():
 
     # TODO: Check for command-line usage
     if len(sys.argv) < 1 or len(sys.argv) > 2:
-        print("Oopsie you used the wrong number of arguments, ")
+        print("Oopsie you used the wrong number of arguments D: you should use two next time :3")
+        return
 
     # TODO: Read database file into a variable
 
