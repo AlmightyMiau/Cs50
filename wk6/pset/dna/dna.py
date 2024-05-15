@@ -20,9 +20,7 @@ def main():
     # TODO: Read database file into a variable
     database = 'databases/' + sys.argv[1]
     rows = []
-    header = ''
     with open(database) as file:
-        header = csv.reader(file)
         reader = csv.DictReader(file)
         for row in reader:
             rows.append(row)
