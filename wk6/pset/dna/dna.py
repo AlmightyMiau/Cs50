@@ -22,11 +22,8 @@ def main():
     rows = []
     with open(database) as file:
         reader = csv.DictReader(file)
-        # Get the header (first line)
-        header = next(reader)
-
-        # Get the rest of the data
-        rows = list(reader)
+        for row in reader:
+            rows.append(row)
 
     # TODO: Read DNA sequence file into a variable
     text = 'sequences/' + sys.argv[2]
