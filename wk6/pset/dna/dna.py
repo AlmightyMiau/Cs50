@@ -56,7 +56,7 @@ def main():
                 else:
                     counter += 1
         if counter == range(len(fields)):
-            print(person[0])
+            print(person['name'])
             return
 
     print('No match')
