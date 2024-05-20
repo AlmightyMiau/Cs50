@@ -38,7 +38,7 @@ def main():
 
     for i in range(len(fields)):
         print(i)
-        if not fields[i] == 'name':
+        if fields[i] != 'name':
             matches[i] = longest_match(sequence, fields[i])
         else:
             matches[i] = ''
