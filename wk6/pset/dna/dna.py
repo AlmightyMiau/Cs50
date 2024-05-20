@@ -51,11 +51,11 @@ def main():
         counter = 0
         for i in range(len(fields)):
             if fields[i] != 'name':
-                if person[fields[i]] != matches[i]:
-                    print(person[fields[i]], matches[i])
-                    break
-                else:
+                if person[fields[i]] == matches[i]:
                     counter += 1
+                    print(counter)
+                else:
+                    break
         print(counter, ',', len(fields))
         if counter == len(fields):
             print(person['name'])
