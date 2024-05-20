@@ -35,8 +35,9 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     for i in len(fields):
+        if 
         longest_match(sequence, fields[i])
-    print('38', str1)
+
 
     # TODO: Check database for matching profiles
 
