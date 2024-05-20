@@ -20,8 +20,10 @@ def main():
     # TODO: Read database file into a variable
     database = 'databases/' + sys.argv[1]
     rows = []
+    fields = []
     with open(database) as file:
         reader = csv.DictReader(file)
+        fields = reader.fieldnames
         for row in reader:
             rows.append(row)
 
@@ -33,8 +35,8 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     str1 = rows[0]
-    print('36', str1['name'])
-    print(rows)
+    print('38', str1['name'])
+    print('39', fields)
 
     # TODO: Check database for matching profiles
 
