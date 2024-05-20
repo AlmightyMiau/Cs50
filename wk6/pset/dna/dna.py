@@ -35,6 +35,7 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     matches = []
+    
     for i in len(fields):
         if not fields[i] == 'name':
             matches[i] = longest_match(sequence, fields[i])
