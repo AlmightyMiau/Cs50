@@ -1,0 +1,7 @@
+I would take the average value of the energy, valence, and danceability of each
+song, then calculate the moods based on those values
+
+One downside of this is that it may cancel out extreme values, leading to values
+just in the  middle, and an inaccurate mood given. A better way to do this would
+be to find clumps of the most common values of each and use the two biggest clumps
+to base the mood on.
