@@ -47,15 +47,17 @@ def main():
 
     # TODO: Check database for matching profiles
     for person in rows:
-        print(person)
+        # print(person)
         counter = 0
         for i in range(len(fields)):
             if fields[i] != 'name':
                 if person[fields[i]] != matches[i]:
+                    print(person[fields[i]], matches[i])
                     break
                 else:
                     counter += 1
-        if counter == range(len(fields)):
+        print(counter, ',', len(fields))
+        if counter == len(fields):
             print(person['name'])
             return
 
