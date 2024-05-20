@@ -13,6 +13,6 @@ WHERE id IN (
             AND birth = 1958
         )
     )
-    NOT name = "Kevin Bacon"
 )
+AND NOT name = "Kevin Bacon"
 ;
