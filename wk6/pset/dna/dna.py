@@ -41,12 +41,25 @@ def main():
         else:
             matches.append('')
 
-    print(fields)
-    print(matches)
+    # print(rows)
+    # print(fields)
+    # print(matches)
 
     # TODO: Check database for matching profiles
-    for row in rows:
+    for person in rows:
+        print(person)
+        counter = 0
+        for i in range(len(fields)):
+            if fields[i] != 'name':
+                if person[fields[i]] != matches[i]:
+                    break
+                else:
+                    counter += 1
+        if counter == range(len(fields)):
+            print(person[0])
+            return
 
+    print('No match')
     return
 
 
