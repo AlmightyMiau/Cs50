@@ -34,9 +34,12 @@ def main():
         sequence = sequence.join(file.readlines())
 
     # TODO: Find longest match of each STR in DNA sequence
+    matches = []
     for i in len(fields):
         if not fields[i] == 'name':
-            longest_match(sequence, fields[i])
+            matches[i] = longest_match(sequence, fields[i])
+
+    print(matches)
 
     # TODO: Check database for matching profiles
 
