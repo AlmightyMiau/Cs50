@@ -35,17 +35,17 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     matches = []
-
-    for i in range(len(fields)):
-        print(i)
-        if fields[i] != 'name':
-            matches[i] = longest_match(sequence, fields[i])
+    for field in fields:
+        if field != 'name':
+            matches.append(longest_match(sequence, field))
         else:
-            matches[i] = ''
+            matches.append('')
 
+    print(fields)
     print(matches)
 
     # TODO: Check database for matching profiles
+    for row in rows:
 
     return
 
