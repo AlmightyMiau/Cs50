@@ -7,7 +7,11 @@ WHERE id IN (
         SELECT id
         FROM people
         WHERE name = "Bradley Cooper"
-    ) AND person_id = (
+    )
+) AND (
+    SELECT movie_id
+    FROM stars
+    WHERE person_id = (
         SELECT id
         FROM people
         WHERE name = "Jennifer Lawrence"
