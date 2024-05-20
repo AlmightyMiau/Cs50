@@ -16,6 +16,6 @@ with open("favorites.csv") as file:
         else:
             counts[favorite] = 1
 
-for favorite in counts:
+for favorite in sorted(counts, key=counts.get):
     print(favorite, ':', counts[favorite])
 
