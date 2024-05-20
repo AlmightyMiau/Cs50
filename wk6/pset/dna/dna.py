@@ -8,17 +8,9 @@ def main():
     if len(sys.argv) < 2 and len(sys.argv) > 3:
         print("Oopsie you used the wrong number of arguments D: you should use two next time :3")
         return
-    # # check to see if arg 0 is a csv file
-    # if not sys.argv[0].endswith('.csv'):
-    #     print("Oh no, that isn't a csv file :( that won't work can you fix that please?")
-    #     return
-    # # check to see if arg 1 is a txt file
-    # if not sys.argv[1].endswith('.txt'):
-    #     print("Oh no, that isn't a txt file :( that won't work can you fix that please?")
-    #     return
 
     # TODO: Read database file into a variable
-    database = 'databases/' + sys.argv[1]
+    database = sys.argv[1]
     rows = []
     fields = []
     with open(database) as file:
@@ -28,7 +20,7 @@ def main():
             rows.append(row)
 
     # TODO: Read DNA sequence file into a variable
-    text = 'sequences/' + sys.argv[2]
+    text = sys.argv[2]
     sequence = ''
     with open(text) as file:
         sequence = sequence.join(file.readlines())
@@ -41,13 +33,8 @@ def main():
         else:
             matches.append('')
 
-    # print(rows)
-    # print(fields)
-    # print(matches)
-
     # TODO: Check database for matching profiles
     for person in rows:
-        # print(person)
         counter = 1
         for i in range(len(fields)):
             if fields[i] != 'name':
