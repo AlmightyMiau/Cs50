@@ -116,8 +116,8 @@ WHERE id = (
     SELECT destination_airport_id
     FROM flights
     WHERE year = 2023
-    AND month = 8
-    AND day = 28
+    AND month = 7
+    AND day = 29
     AND origin_airport_id = (
         SELECT id
         FROM airports
@@ -126,3 +126,6 @@ WHERE id = (
     ORDER BY hour
     LIMIT 1
 );
+-- Destination City is New York City
+
+-- Check passengers on flight with id of 36
