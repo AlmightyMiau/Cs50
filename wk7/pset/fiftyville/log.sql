@@ -173,6 +173,7 @@ AND id IN (
 ;
 -- BRUCE is the thief
 
+-- Get phone number of accomplice
 SELECT receiver
 FROM phone_calls
 WHERE caller = (
@@ -183,6 +184,27 @@ WHERE caller = (
 AND year = 2023
 AND month = 7
 AND day = 28
-AND duration = 10
+AND duration < 60
 ;
+-- "(375) 555-8161"
 
+-- Get name of accomplice from their phone number
+SELECT name
+FROM people
+WHERE phone_number = (
+    SELECT receiver
+    FROM phone_calls
+    WHERE caller = (
+        SELECT phone_number
+        FROM people
+        WHERE name = "Bruce"
+    )
+    AND year = 2023
+    AND month = 7
+    AND day = 28
+    AND duration < 60
+)
+;
+-- ROBIN is the accomplice
+
+-- :3 Miau
