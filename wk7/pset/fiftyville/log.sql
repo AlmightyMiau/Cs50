@@ -109,17 +109,20 @@ AND duration <= 60;
 .schema flights
 -- origin, destination
 
--- What id is the Fiftyville airport?
-
-
--- Look for purchase of flight ticket on 7/28/2023 after 10:15 departing from Fiftyville
-SELECT destination_airport_id, id
-FROM bakery_security_logs
-WHERE year = 2023
-AND month = 7
-AND day = 28
-AND hour = 10
-AND minute >= 15
-AND origin_airport_id = (
-    SELECT
-)
+-- Look for destination of flight ticket on 7/28/2023 departing from Fiftyville
+SELECT city
+FROM airports
+WHERE id = (
+    SELECT destination_airport_id
+    FROM flights
+    WHERE year = 2023
+    AND month = 8
+    AND day = 28
+    AND origin_airport_id = (
+        SELECT id
+        FROM airports
+        WHERE city = "Fiftyville"
+    )
+    ORDER BY hour
+    LIMIT 1
+);
