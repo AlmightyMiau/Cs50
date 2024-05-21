@@ -77,3 +77,13 @@ AND day = 28
 AND atm_location = "Leggett Street"
 AND transaction_type = "withdraw";
 -- account_number:amount | 28500762:48, 28296815:20, 76054385:60, 49610011:50, 16153065:80, 25506511:20, 81061156:30, 26013199:35
+
+-- What data does the bank_accounts table have?
+.schema bank_accounts
+-- account_number, person_id, creation_year
+
+-- What data does the phone_calls table have?
+.schema phone_calls
+-- caller, reciever, duration, date
+
+-- Check for call on 7/28/2023
