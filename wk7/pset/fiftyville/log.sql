@@ -162,7 +162,7 @@ WHERE flight_id = (SELECT destination_airport_id
 SELECT name
 FROM people
 WHERE phone_number IN (
-    SELECT caller, receiver
+    SELECT caller
     FROM phone_calls
     WHERE year = 2023
     AND month = 7
