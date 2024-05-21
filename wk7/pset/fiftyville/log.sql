@@ -107,6 +107,6 @@ AND duration <= 60;
 
 -- What data does flights have
 .schema flights
--- origin, destination, 
+-- origin, destination,
 
--- Look for purchase of flight ticket
+-- Look for purchase of flight ticket on 7/28/2023 after 10:15 departing from Fiftyville
