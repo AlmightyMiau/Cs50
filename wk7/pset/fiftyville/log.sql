@@ -201,12 +201,12 @@ WHERE phone_number IN (
 
 SELECT name
 FROM people
-JOIN phone_calls ON people.phone_number = phone_calls.phone_number
+JOIN phone_calls ON people.phone_number = phone_calls.caller
 JOIN passengers ON people.passport_number = passengers.passport_number
 JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
-WHERE year = 2023
-AND month = 7
-AND day = 28
+WHERE phone_calls.year = 2023
+AND phone_calls.month = 7
+AND phone_calls.day = 28
 AND duration <= 60
 AND flight_id = (
     SELECT destination_airport_id
