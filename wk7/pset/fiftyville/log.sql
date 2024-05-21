@@ -201,7 +201,7 @@ WHERE phone_number IN (
 
 SELECT name
 FROM people
-JOIN phone ON people.phone_number = phone_calls.phone_number
+JOIN phone_calls ON people.phone_number = phone_calls.phone_number
 JOIN passengers ON people.passport_number = passengers.passport_number
 JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
 WHERE year = 2023
