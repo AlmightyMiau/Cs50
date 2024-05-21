@@ -135,7 +135,8 @@ WHERE id = (
 -- Check passport numbers and seats of passengers on flight with id of 36
 SELECT passport_number, seat
 FROM passengers
-WHERE flight_id = (SELECT destination_airport_id
+WHERE flight_id = (
+    SELECT destination_airport_id
     FROM flights
     WHERE year = 2023
     AND month = 7
@@ -197,6 +198,12 @@ WHERE phone_number IN (
     AND activity LIKE "exit"
 )
 ;
+
+SELECT name
+FROM people
+JOIN phone ON people.phone_number = phone.phone_number
+JOIN phone ON people.phone_number = phone.phone_number
+JOIN phone ON people.phone_number = phone.phone_number
 
 
 SELECT name
