@@ -42,7 +42,7 @@ WHERE year = 2023
 AND month = 7
 AND day = 28
 AND transcript LIKE "%bakery%";
--- Ruth->     Less than 10 min after crime, thief gets in car in bakery parking lot; Check Bakery Parking Lot cams
+-- Ruth->     Less than 10 min after crime, thief gets in car and leaves in bakery parking lot; Check Bakery Parking Lot cams
 -- Eugene->   Eugene knows the thief; Thief withdrew money from ATM on Legget Street
 -- Raymond->  Thief made a call <1 min in length after the crime; Thief said they would take first flight out of Fiftyville on 7/29/2023 (day after crime); Accomplice bought ticket after crime (7/28/2023 after 10:15)
 
@@ -50,11 +50,30 @@ AND transcript LIKE "%bakery%";
 .schema bakery_security_logs
 
 -- Check activity and license plate of bakery cams on 7/28/2023 from 10:05 to 10:25
-SELECT activity, license_plate
+SELECT license_plate
 FROM bakery_security_logs
 WHERE year = 2023
 AND month = 7
 AND day = 28
 AND hour = 10
-AND minute >= 5
-AND minute <= 25;
+AND minute >= 05
+AND minute <= 25
+AND activity LIKE "exit";
+-- License Plates to Check | 5P2BI95, 94KL13X, 6P58WS2, 4328GD8, G412CB7, L93JTIZ, 322W7JE, 0NTHK55
+
+-- Does the table people have license plates?
+.schema people
+-- Yes; also has phone, passport
+
+-- What data is in atm transactions
+.schema atm_transactions
+
+-- Check ATM withdrawal on Legget Street on 7/28/2023
+SELECT account_number, amount
+FROM atm_transactions
+WHERE year = 2023
+AND month = 7
+AND day = 28
+AND atm_location = "Leggett Street"
+AND transaction_type = "withdraw";
+-- account_number:amount | 28500762:48, 28296815:20, 76054385:60, 49610011:50, 16153065:80, 25506511:20, 81061156:30, 26013199:35
