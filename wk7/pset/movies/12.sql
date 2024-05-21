@@ -1,6 +1,6 @@
 SELECT title
 FROM movies
-WHERE id IN (
+WHERE id = (
     SELECT movie_id
     FROM stars
     WHERE person_id = (
