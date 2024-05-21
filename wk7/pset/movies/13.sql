@@ -1,4 +1,4 @@
-SELECT name
+SELECT Count(*)
 FROM people
 WHERE id IN (
     SELECT person_id
@@ -14,5 +14,5 @@ WHERE id IN (
         )
     )
 )
-AND NOT name = "Kevin Bacon"
+AND name != "Kevin Bacon"
 ;
