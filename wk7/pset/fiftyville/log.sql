@@ -105,3 +105,8 @@ AND duration <= 60;
 -- | 55       | (826) 555-1652 | (066) 555-9701 |
 -- | 54       | (338) 555-6650 | (704) 555-2131 |
 
+-- What data does flights have
+.schema flights
+-- origin, destination, 
+
+-- Look for purchase of flight ticket
