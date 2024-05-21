@@ -128,4 +128,72 @@ WHERE id = (
 );
 -- Destination City is New York City
 
--- Check passengers on flight with id of 36
+-- What data does passengers have?
+.schema passengers
+-- flight_id, passport_number, seat
+
+-- Check passport numbers and seats of passengers on flight with id of 36
+SELECT passport_number, seat
+FROM passengers
+WHERE flight_id = (SELECT destination_airport_id
+    FROM flights
+    WHERE year = 2023
+    AND month = 7
+    AND day = 29
+    AND origin_airport_id = (
+        SELECT id
+        FROM airports
+        WHERE city = "Fiftyville"
+    )
+    ORDER BY hour
+    LIMIT 1
+);
+-- | passport_number | seat |
+-- | 7214083635      | 2A   |
+-- | 1695452385      | 3B   |
+-- | 5773159633      | 4A   |
+-- | 1540955065      | 5C   |
+-- | 8294398571      | 6C   |
+-- | 1988161715      | 6D   |
+-- | 9878712108      | 7A   |
+-- | 8496433585      | 7B   |
+
+-- Check which person was on the flight (passport number), at the bakery (license plate), caller or receiver phone number,
+SELECT name
+FROM people
+WHERE phone_number IN (
+    SELECT caller, receiver
+    FROM phone_calls
+    WHERE year = 2023
+    AND month = 7
+    AND day = 28
+    AND duration <= 60
+) AND passport_number IN (
+    SELECT passport_number
+    FROM passengers
+    WHERE flight_id = (
+        SELECT destination_airport_id
+        FROM flights
+        WHERE year = 2023
+        AND month = 7
+        AND day = 29
+        AND origin_airport_id = (
+            SELECT id
+            FROM airports
+            WHERE city = "Fiftyville"
+        )
+        ORDER BY hour
+        LIMIT 1
+    )
+) AND license_plate IN (
+    SELECT license_plate
+    FROM bakery_security_logs
+    WHERE year = 2023
+    AND month = 7
+    AND day = 28
+    AND hour = 10
+    AND minute >= 05
+    AND minute <= 25
+    AND activity LIKE "exit"
+)
+;
