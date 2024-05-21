@@ -162,74 +162,27 @@ WHERE flight_id = (
 -- Check which person was on the flight (passport number), at the bakery (license plate), caller or receiver phone number,
 SELECT name
 FROM people
-WHERE phone_number IN (
-    SELECT caller
-    FROM phone_calls
-    WHERE year = 2023
-    AND month = 7
-    AND day = 28
-    AND duration <= 60
-) AND passport_number IN (
-    SELECT passport_number
-    FROM passengers
-    WHERE flight_id = (
-        SELECT destination_airport_id
-        FROM flights
-        WHERE year = 2023
-        AND month = 7
-        AND day = 29
-        AND origin_airport_id = (
-            SELECT id
-            FROM airports
-            WHERE city = "Fiftyville"
-        )
-        ORDER BY hour
-        LIMIT 1
-    )
-) AND license_plate IN (
-    SELECT license_plate
-    FROM bakery_security_logs
-    WHERE year = 2023
-    AND month = 7
-    AND day = 28
-    AND hour = 10
-    AND minute >= 05
-    AND minute <= 25
-    AND activity LIKE "exit"
-)
-;
-
-SELECT name
-FROM people
-JOIN phone_calls ON people.phone_number = phone_calls.caller
-JOIN passengers ON people.passport_number = passengers.passport_number
-JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
-WHERE phone_calls.year = 2023
-AND phone_calls.month = 7
-AND phone_calls.day = 28
-AND duration <= 60
-AND flight_id = (
-    SELECT destination_airport_id
-    FROM flights
-    WHERE year = 2023
-    AND month = 7
-    AND day = 29
-    AND origin_airport_id = (
-        SELECT id
-        FROM airports
-        WHERE city = "Fiftyville"
-    )
-    ORDER BY hour
-    LIMIT 1
-) AND activity LIKE "exit"
-;
-
-
-
-SELECT name
-FROM people
 WHERE phone_number IN ("(130) 555-0289", "(499) 555-9472", "(367) 555-5533", "(609) 555-5876", "(499) 555-9472", "(286) 555-6063", "(770) 555-1861", "(031) 555-6622", "(826) 555-1652", "(338) 555-6650")
 AND passport_number IN (7214083635, 1695452385, 5773159633, 1540955065, 8294398571, 1988161715, 9878712108, 8496433585)
 AND license_plate IN ("5P2BI95", "94KL13X", "6P58WS2", "4328GD8", "G412CB7", "L93JTIZ", "322W7JE", "0NTHK55")
+AND id IN (
+    SELECT person_id
+    FROM bank_accounts
+    WHERE account_number IN (28500762, 28296815, 76054385, 49610011, 16153065, 25506511, 81061156, 26013199)
+)
+;
+-- BRUCE is the thief
+
+SELECT receiver
+FROM phone_calls
+WHERE caller = (
+    SELECT phone_number
+    FROM people
+    WHERE name = "Bruce"
+)
+AND year = 2023
+AND month = 7
+AND day = 28
+AND duration = 10
 ;
 
