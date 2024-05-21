@@ -13,3 +13,4 @@ WHERE year = 2023
 AND month = 7
 AND day = 28
 AND street = "Humphrey Street";
+-- crime at 10:15; Check Interviews with three people present, all mention the bakery; 
