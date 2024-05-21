@@ -201,10 +201,29 @@ WHERE phone_number IN (
 
 SELECT name
 FROM people
-JOIN phone ON people.phone_number = phone.phone_number
+JOIN phone ON people.phone_number = phone_calls.phone_number
 JOIN passengers ON people.passport_number = passengers.passport_number
 JOIN bakery_security_logs ON people.license_plate = bakery_security_logs.license_plate
-WHERE
+WHERE year = 2023
+AND month = 7
+AND day = 28
+AND duration <= 60
+AND flight_id = (
+    SELECT destination_airport_id
+    FROM flights
+    WHERE year = 2023
+    AND month = 7
+    AND day = 29
+    AND origin_airport_id = (
+        SELECT id
+        FROM airports
+        WHERE city = "Fiftyville"
+    )
+    ORDER BY hour
+    LIMIT 1
+) AND activity LIKE "exit"
+;
+
 
 
 SELECT name
