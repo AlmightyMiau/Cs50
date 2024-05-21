@@ -50,3 +50,11 @@ AND transcript LIKE "%bakery%";
 .schema bakery_security_logs
 
 -- Check activity and license plate of bakery cams on 7/28/2023 from 10:05 to 10:25
+SELECT activity, license_plate
+FROM bakery_security_logs
+WHERE year = 2023
+AND month = 7
+AND day = 28
+AND hour = 10
+AND minute >= 5
+AND minute <= 25;
