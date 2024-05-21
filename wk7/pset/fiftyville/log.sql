@@ -86,4 +86,10 @@ AND transaction_type = "withdraw";
 .schema phone_calls
 -- caller, reciever, duration, date
 
--- Check for call on 7/28/2023
+-- Check for call on 7/28/2023 and duration of less than 1 minute | caller is thief, reciever is accomplice
+SELECT duration, caller, receiver
+FROM phone_calls
+WHERE year = 2023
+AND month = 7
+AND day = 28
+AND duration <= 60;
