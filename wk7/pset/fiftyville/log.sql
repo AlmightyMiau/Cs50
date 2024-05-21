@@ -202,8 +202,8 @@ WHERE phone_number IN (
 SELECT name
 FROM people
 JOIN phone ON people.phone_number = phone.phone_number
-JOIN phone ON people.phone_number = phone.phone_number
-JOIN phone ON people.phone_number = phone.phone_number
+JOIN passengers ON people.passport_number = passengers.passport_number
+JOIN bakery_security_logs ON people.phone_number = phone.phone_number
 
 
 SELECT name
