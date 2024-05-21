@@ -11,4 +11,5 @@ WHERE id IN (
     )
 )
 ORDER BY rating
+LIMIT 5
 ;
