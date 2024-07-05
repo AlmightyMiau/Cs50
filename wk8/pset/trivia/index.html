@@ -24,8 +24,15 @@
                 };
 
                 document.querySelector('form').addEventListener('submit', function(event) {
-                    if (document.querySelector('#big').value == 'small') {
-                        
+                    if (document.querySelector('#big').value == 'small')
+                    {
+                        document.querySelector('#big').style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                    }
+                    else
+                    {
+                        document.querySelector('#big').style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Inorrect';
                     }
                     event.preventDefault();
                 });
