@@ -7,8 +7,8 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            document.querySelectorAll('answer').addEventListener('click', function() {
-                document.querySelectorAll('answer').style.backgroundColor = "red";
+            document.querySelectorAll("correct").addEventListener("click", function() {
+                document.querySelectorAll("correct").style.backgroundColor = "red";
             });
 
         </script>
@@ -22,10 +22,15 @@
             <div class="section">
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
+
                 <h3>QUESTION?</h3>
-                <button id="answer">answer1</button>
-                <button id="answer">answer2</button>
-                <button id="answer">answer3</button>
+
+                <button class="correct">answer1</button>
+                <button class="incorrect">answer2</button>
+                <button class="incorrect">answer3</button>
+
+                <p id="feedback"></p>
+
             </div>
 
             <div class="section">
