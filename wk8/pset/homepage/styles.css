@@ -61,21 +61,6 @@ main {
     background-color: var(--background);
 }
 
-.centered
-{
-    text-align: center;
-}
-
-.large
-{
-    font-size: large;
-}
-
-.medium
-{
-    font-size: medium;
-}
-
 footer {
     border:var(--border);
     color: red;
