@@ -8,10 +8,11 @@
     --main-color: #EB53D3;
     --main-color-dk: #551251;
     --accent-1: #6eebff;
-    --accent-2:#a225e3;
-    --content-spacing:5px;
+    --accent-2: #a225e3;
+    --content-spacing: 5px;
     --background-img: #332233;
     --banner: #EB53D3;
+    --titleBars: #6eebff;
     --text-color: white;
     --border:1px solid black;
 }
@@ -70,8 +71,11 @@ aside {
     font-size: medium;
 }
 
-#footer
-{
+footer {
+    border:var(--border);
     color: red;
-    font-size: small;
+    height:25px;
+    margin-top:var(--content-spacing);
+    background-color:var(--titleBars);
+    text-align:center;
 }
