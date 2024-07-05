@@ -1,8 +1,15 @@
 4 hmtl pages
     1/4
     index.html
-10 distinct html tags
-    0/10
+10 distinct html tags excluding html, head, body, title
+    7/10
+    meta
+    link
+    script
+    style
+    header
+    main
+    footer
 Use Bootstrap at least once
     0/1
 styles.css
