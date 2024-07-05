@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
@@ -25,21 +26,18 @@
 
                 document.querySelector('form').addEventListener('submit', function(event) {
                     event.preventDefault();
-                    if (document.querySelector('#big').value == 'Earl Grey')
-                    {
+                    if (document.querySelector('#big').value == 'Earl Grey') {
                         document.querySelector('#big').style.backgroundColor = 'green';
                         document.querySelector('#feedback2').innerHTML = 'Correct!';
-                    }
-                    else
-                    {
+                    } else {
                         document.querySelector('#big').style.backgroundColor = 'red';
                         document.querySelector('#feedback2').innerHTML = 'Inorrect';
                     }
                 });
             });
-
         </script>
     </head>
+
     <body>
         <div class="header">
             <h1>Trivia!</h1>
@@ -80,4 +78,5 @@
             </div>
         </div>
     </body>
+
 </html>
