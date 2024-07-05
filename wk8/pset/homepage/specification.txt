@@ -1,0 +1,18 @@
+10 html tags
+    meta
+    link
+    script
+    main
+    aside
+    div
+    nav
+    ul
+    li
+    a
+5 different properties
+    margin
+    box-sizing
+    font-family
+    background-color
+    color
+
