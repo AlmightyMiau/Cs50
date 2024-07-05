@@ -16,3 +16,4 @@
     background-color
     color
 
+I used Bootstrap to display a spinner, and used js to hide it when the page was finished loading.
