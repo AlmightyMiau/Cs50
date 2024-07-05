@@ -98,6 +98,10 @@ footer {
     text-align:center;
 }
 
+.hidden {
+    display: none;
+}
+
 @media only screen and (max-width: 640px) {
     nav ul {
         list-style-image:none;
