@@ -1,0 +1,24 @@
+4 hmtl pages
+    1/4
+    index.html
+10 distinct html tags
+    0/10
+Use Bootstrap at least once
+    0/1
+styles.css
+    5 different selectors
+        1/5
+        class
+    5 different properties
+        3/5
+        text-align
+        font-size
+        color
+1 Javascript
+    0/1
+Mobile friendly
+    0/1
+Specification.txt, list:
+    10 html tags
+    5 css properties
+    how js and bootstrap were used
