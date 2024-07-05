@@ -61,6 +61,10 @@ main {
     background-color: var(--background);
 }
 
+.content {
+    padding:25px;
+}
+
 footer {
     border:var(--border);
     color: red;
