@@ -5,34 +5,41 @@
     art.html
     cats.html
 10 distinct html tags excluding html, head, body, title
-    7/10
+    10/10
     meta
     link
     script
-    style
-    header
     main
-    footer
-Use Bootstrap at least once
-    0/1
+    aside
+    div
+    nav
+    ul
+    li
+    a
 styles.css
     5 different selectors
-        2/5
+        5/5
         class (.)
         psuedoclass (:)
+        tag ()
+        id (#)
+        at-rule (@)
     5 different properties
-        3/5
-        text-align
-        font-size
+        5/5
+        margin
+        box-sizing
+        font-family
+        background-color
         color
-        background
-1 Javascript
-    0/1
 Mobile friendly
     1/1
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+Use Bootstrap at least once
+    0/1
+1 Javascript
+    0/1
 Specification.txt, list:
     10 html tags
     5 css properties
