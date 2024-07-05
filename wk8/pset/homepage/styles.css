@@ -6,6 +6,10 @@
     --accent-2:#a225e3;
 }
 
+body {
+    background-color: var(--main-color);
+}
+
 main {
     width: 74%;
     background-color: var(--background);
