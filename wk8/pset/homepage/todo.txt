@@ -22,11 +22,14 @@ styles.css
         text-align
         font-size
         color
+        background
 1 Javascript
     0/1
 Mobile friendly
     1/1
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
 Specification.txt, list:
     10 html tags
     5 css properties
