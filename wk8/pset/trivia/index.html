@@ -7,8 +7,20 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            document.querySelectorAll("correct").addEventListener("click", function() {
-                document.querySelectorAll("correct").style.backgroundColor = "red";
+            document.addEventListener('DOMContentLoaded', function() {
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = 'Correct :3';
+                });
+
+                let incorrects = document.querSelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function() {
+                        incorrect.style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect :(';
+                    });
+                }
             });
 
         </script>
@@ -29,7 +41,7 @@
                 <button class="incorrect">answer2</button>
                 <button class="incorrect">answer3</button>
 
-                <p id="feedback"></p>
+                <p id="feedback1"></p>
 
             </div>
 
