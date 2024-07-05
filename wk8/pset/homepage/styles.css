@@ -6,6 +6,11 @@
     --accent-2:#a225e3;
 }
 
+main {
+    width: 74%;
+    background-color: var(--background);
+}
+
 .centered
 {
     text-align: center;
