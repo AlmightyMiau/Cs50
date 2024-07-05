@@ -4,6 +4,8 @@
     --main-color-dk: #551251;
     --accent-1: #6eebff;
     --accent-2:#a225e3;
+    --content-spacing:5px;
+    --border:1px solid black;
 }
 
 body {
@@ -12,6 +14,13 @@ body {
 
 main {
     width: 74%;
+    background-color: var(--background);
+}
+
+aside {
+    width: 30%;
+    margin-left:var(--content-spacing);
+    border-left:var(--border);
     background-color: var(--background);
 }
 
@@ -31,7 +40,7 @@ main {
     font-size: medium;
 }
 
-.small
+#footer
 {
     color: red;
     font-size: small;
