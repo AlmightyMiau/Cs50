@@ -34,12 +34,13 @@ styles.css
 Mobile friendly
     1/1
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
 Use Bootstrap at least once
-    0/1
+    1/1
+    class="spinner-border"
 1 Javascript
-    0/1
+    1/1
+    disables spinner when site has loaded
+
 Specification.txt, list:
     10 html tags
     5 css properties
