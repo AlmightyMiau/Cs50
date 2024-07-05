@@ -15,7 +15,7 @@
     --titleBars: #551251;
     --text-color: white;
     --border:1px solid black;
-    --arrows:
+    --arrows:url('/arrow.png');
 }
 
 html,
