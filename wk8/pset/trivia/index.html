@@ -24,6 +24,7 @@
                 };
 
                 document.querySelector('form').addEventListener('submit', function(event) {
+                    event.preventDefault();
                     if (document.querySelector('#big').value == 'small')
                     {
                         document.querySelector('#big').style.backgroundColor = 'green';
@@ -34,7 +35,6 @@
                         document.querySelector('#big').style.backgroundColor = 'red';
                         document.querySelector('#feedback2').innerHTML = 'Inorrect';
                     }
-                    event.preventDefault();
                 });
             });
 
@@ -71,6 +71,9 @@
                     <input autocomplete='off' id='big' placeholder='big answer' type='text'>
                     <input type='submit'>
                 </form>
+
+                <p id="feedback2"></p>
+
             </div>
         </div>
     </body>
