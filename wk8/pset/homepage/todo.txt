@@ -1,6 +1,9 @@
 4 hmtl pages
-    1/4
+    4/4
     index.html
+    factorio.html
+    art.html
+    cats.html
 10 distinct html tags excluding html, head, body, title
     7/10
     meta
