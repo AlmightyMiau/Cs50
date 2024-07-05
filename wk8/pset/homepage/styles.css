@@ -24,6 +24,10 @@ aside {
     background-color: var(--background);
 }
 
+#container {
+    border-top: none;
+}
+
 .centered
 {
     text-align: center;
