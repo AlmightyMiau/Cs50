@@ -18,6 +18,10 @@
     --arrows:url('/arrow.png');
 }
 
+.centered {
+    text-align: center;
+}
+
 html,
 body {
     margin: 0;
