@@ -56,6 +56,13 @@ aside {
     background-color: var(--background);
 }
 
+.title, .sidebar-title {
+    background-image:var(--titleBars);
+    font-weight:bold;
+    border:var(--border);
+    font-size:20px;
+}
+
 main {
     width: 74%;
     background-color: var(--background);
