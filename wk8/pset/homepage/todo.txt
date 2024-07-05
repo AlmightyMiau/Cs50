@@ -14,8 +14,9 @@ Use Bootstrap at least once
     0/1
 styles.css
     5 different selectors
-        1/5
-        class
+        2/5
+        class (.)
+        psuedoclass (:)
     5 different properties
         3/5
         text-align
