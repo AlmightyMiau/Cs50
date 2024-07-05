@@ -11,6 +11,7 @@
     --accent-2:#a225e3;
     --content-spacing:5px;
     --background-img: #332233;
+    --banner: #EB53D3;
     --text-color: white;
     --border:1px solid black;
 }
@@ -25,6 +26,17 @@ body {
 body {
     background-color: var(--background-img);
     color: var(--text-color);
+}
+.topbar {
+    background-color: var(--banner);
+    height:150px;
+    margin-bottom:var(--content-spacing);
+    border:var(--border);
+}
+#container,
+.topbar img {
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 main {
